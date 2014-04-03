@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using System.Threading;
-namespace EasyBoxClient.Sync
+namespace EasyboxClient.Sync
 {
     class SendSync
     {

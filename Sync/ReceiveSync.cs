@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.IO;
-namespace EasyBoxClient.Sync
+namespace EasyboxClient.Sync
 {
     class ReceiveSync
     {

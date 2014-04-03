@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Net;
 using System.Net.Sockets;
-namespace EasyBoxClient.Sync
+namespace EasyboxClient.Sync
 {   
     class TimingSyncThread
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 
-namespace EasyBoxClient.UserLogin
+namespace EasyboxClient.UserLogin
 {
     class UserManager
     {

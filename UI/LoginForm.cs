@@ -9,7 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 
-namespace EasyBoxClient.UI
+namespace EasyboxClient.UI
 {
     public partial class LoginForm : Form
     {
