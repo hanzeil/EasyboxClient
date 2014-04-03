@@ -20,26 +20,33 @@ namespace EasyboxClient.Sync
         {
             this.s = s;
             this.syncPath = syncPath;
-            while(true)
+            try
             {
-                //接收需要同步的类型
-                syncType = getStringFromUTF8(new byte[20]);
-                //接收文件名
-                fileName = getStringFromUTF8(new byte[50]);
-                fileName = fileName.Substring(fileName.IndexOf('/') + 1);
-                fileName = syncPath + "\\" + fileName;
-                if(syncType.Equals("Send"))
+                while (true)
                 {
-                    ReceiveFile();
-                    continue;
+                    //接收需要同步的类型
+                    syncType = getStringFromUTF8(new byte[20]);
+                    //接收文件名
+                    fileName = getStringFromUTF8(new byte[50]);
+                    fileName = fileName.Substring(fileName.IndexOf('/') + 1);
+                    fileName = syncPath + "\\" + fileName;
+                    if (syncType.Equals("Send"))
+                    {
+                        ReceiveFile();
+                        continue;
+                    }
+                    else if (syncType.Equals("Delete"))
+                    {
+                        File.Delete(fileName);
+                        continue;
+                    }
+                    break;
                 }
-                else if (syncType.Equals("Delete"))
-                {
-                    File.Delete(fileName);
-                    continue;
-                }
-                break;
             }
+            catch(Exception){
+                MessageBox.Show("文件传输错误，系统正在尝试修复！", "Easybox");
+            }
+            
         }
         private void ReceiveFile()
         {
@@ -63,11 +70,10 @@ namespace EasyboxClient.Sync
                 }
                 aFile.Close();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                MessageBox.Show("文件传输错误，系统正在尝试修复！", "Easybox");
+                throw (e);
             }
-            
         }
         private String getStringFromUTF8(byte[] buf)
         {
