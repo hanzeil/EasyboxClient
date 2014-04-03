@@ -45,7 +45,7 @@ namespace EasyboxClient.Sync
                 }
                 catch (SocketException)
                 {
-                    MessageBox.Show("您已与服务器断开，同步失败！", "Easybox");
+                    MessageBox.Show("您已与服务器断开，请检查网络！", "Easybox");
                 }      
                 Watcher.StartWatch();
                 //设置同步时间

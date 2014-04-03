@@ -15,9 +15,17 @@ namespace EasyboxClient.UserLogin
          #region  建立MySql数据库连接
         public MySqlConnection GetCon()
         {
-            string str_sqlcon = "server=" + host + ";user id=easybox;password=ruanjiangongcheng;database=easybox;";
-            MySqlConnection mysqlconn = new MySqlConnection(str_sqlcon);
-            return mysqlconn;
+            try
+            {
+                string str_sqlcon = "server=" + host + ";user id=easybox;password=ruanjiangongcheng;database=easybox;";
+                MySqlConnection mysqlconn = new MySqlConnection(str_sqlcon);
+                return mysqlconn;
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show("您已与服务器断开，请检查网络！", "Easybox");
+            }
+            
         }
         #endregion
     }
