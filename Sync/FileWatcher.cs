@@ -83,11 +83,11 @@ namespace EasyboxClient.Sync
         }
         private Boolean IsTmpFile(string FileName) 
         {
-           if(false)
-            //if ((FileName[0] == '~'))
-             //if ((FileName[0] == '~') || (FileName.Substring(FileName.Length - 4, 4) == ".tmp") || (FileName.Substring(FileName.Length - 2, 2) == "00"))
+          /* if(false)
+            if ((FileName[0] == '~'))
+             if ((FileName[0] == '~') || (FileName.Substring(FileName.Length - 4, 4) == ".tmp") || (FileName.Substring(FileName.Length - 2, 2) == "00"))
                 return true;
-            else
+            else*/
                 return false;
         }
     }

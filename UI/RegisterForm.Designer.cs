@@ -1,4 +1,4 @@
-﻿namespace EasyBoxClient.UI
+﻿namespace EasyboxClient.UI
 {
     partial class RegisterForm
     {
