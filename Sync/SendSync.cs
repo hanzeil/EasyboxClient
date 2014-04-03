@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using System.Threading;
+using System.Windows.Forms;
 namespace EasyboxClient.Sync
 {
     class SendSync
@@ -47,9 +48,9 @@ namespace EasyboxClient.Sync
                 //send this client's relativePash(file's name);
                 relativePath = GetRelativePath(fileName);
                 SendStringByUTF8(relativePath);
-            }catch (Exception e)
+            }catch (SocketException)
             {
-                Console.WriteLine(e.Message);
+                MessageBox.Show("您已与服务器断开，同步失败！", "Easybox");
             } 
             if (syncType.Equals("Send"))
             {

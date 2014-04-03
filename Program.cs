@@ -19,7 +19,7 @@ namespace EasyboxClient
             //mutex = new System.Threading.Mutex(true, "Global\\_TEST_Mutex_", out createdNew);//这种在系统中，不管几个用户，只能存在一个这样的程序进程
             if (!createdNew)
             {
-                MessageBox.Show("Easybox is already running.");
+                MessageBox.Show("Easybox is already running.","Easybox");
             }
             return createdNew;
         }

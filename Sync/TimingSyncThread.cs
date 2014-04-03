@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Net;
 using System.Net.Sockets;
+using System.Windows.Forms;
 namespace EasyboxClient.Sync
 {   
     class TimingSyncThread
@@ -29,17 +30,25 @@ namespace EasyboxClient.Sync
         {
             while (true)
             {
-                // 指定端口和IP绑定
-                IPEndPoint ephost = new IPEndPoint(Addr, PORT);
-                // 初始化socket新实例   （ 地址族 + 套接字类型 + 协议 ）
-                this.s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                s.Connect(ephost);
-                //发送客户端主机名，请求同步
-                SendStringByUTF8(hostName);
-                //开始同步
-                new ReceiveSync(s, syncPath);
-                s.Close();
+                try
+                {
+                     // 指定端口和IP绑定
+                    IPEndPoint ephost = new IPEndPoint(Addr, PORT);
+                    // 初始化socket新实例   （ 地址族 + 套接字类型 + 协议 ）
+                    this.s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                    s.Connect(ephost);
+                    //发送客户端主机名，请求同步
+                    SendStringByUTF8(hostName);
+                    //开始同步
+                    new ReceiveSync(s, syncPath);
+                    s.Close();
+                }
+                catch (SocketException)
+                {
+                    MessageBox.Show("您已与服务器断开，同步失败！", "Easybox");
+                }      
                 Watcher.StartWatch();
+                //设置同步时间
                 Thread.Sleep(10000);
                 Watcher.StopWatch(); 
             }
