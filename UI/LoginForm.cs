@@ -138,15 +138,7 @@ namespace EasyBoxClient.UI
         //点击退出事件
         private void Exit_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process[] ps = System.Diagnostics.Process.GetProcesses();
-            foreach (System.Diagnostics.Process item in ps)
-            {
-                if (item.ProcessName == "EXCEL")
-                {
-                    item.Kill();
-                }
-            }
-            this.Close();
+            System.Environment.Exit(0);
         }
         //点击注销事件
         private void Logout_Click(object sender, EventArgs e)
