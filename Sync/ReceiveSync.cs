@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.IO;
+using System.Windows.Forms;
 namespace EasyboxClient.Sync
 {
     class ReceiveSync
@@ -42,24 +43,31 @@ namespace EasyboxClient.Sync
         }
         private void ReceiveFile()
         {
-            int read = 0;
-            //接收文件大小
-            String fileLengthString = getStringFromUTF8(new byte[30]);
-            long fileLength = long.Parse(fileLengthString);
-           //打开文件流开始传输
-            FileStream aFile = new FileStream(fileName, FileMode.Create);
-            int receivedLenth = 0;
-            while (receivedLenth < fileLength)
+            try
             {
-                read = s.Receive(fileData, SocketFlags.None);
-                receivedLenth += read;
-                if (read == 0)
+                //接收文件大小
+                String fileLengthString = getStringFromUTF8(new byte[30]);
+                long fileLength = long.Parse(fileLengthString);
+               //打开文件流开始传输
+                FileStream aFile = new FileStream(fileName, FileMode.Create);
+                int receivedLenth = 0;
+                while (receivedLenth < fileLength)
                 {
-                    break;
+                    int read = s.Receive(fileData, SocketFlags.None);
+                    receivedLenth += read;
+                    if (read == 0)
+                    {
+                        break;
+                    }
+                    aFile.Write(fileData, 0, read);
                 }
-                aFile.Write(fileData, 0, read);
+                aFile.Close();
             }
-            aFile.Close();
+            catch (Exception)
+            {
+                MessageBox.Show("文件传输错误，系统正在尝试修复！", "Easybox");
+            }
+            
         }
         private String getStringFromUTF8(byte[] buf)
         {

@@ -77,9 +77,9 @@ namespace EasyboxClient.Sync
                 }
                 s.Close();
                 aFile.Close();
-            }catch(Exception e)
+            }catch(Exception)
             {
-                Console.WriteLine(e.Message);
+                MessageBox.Show("文件传输错误，系统正在尝试修复！", "Easybox");
             } 
         }
         private String GetRelativePath(String path)
