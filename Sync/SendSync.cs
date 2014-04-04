@@ -18,7 +18,7 @@ namespace EasyboxClient.Sync
         private String syncType;
         private String syncPath;
         // IP地址
-        private IPAddress Addr = IPAddress.Parse("127.0.0.1");  // Hanzeil
+        private IPAddress Addr = IPAddress.Parse("117.121.25.234");  // xdtic
         // 指定端口
         private const int PORT = 8888;
         Byte[] fileData = new Byte[8192];

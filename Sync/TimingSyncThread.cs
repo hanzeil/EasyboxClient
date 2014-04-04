@@ -15,7 +15,7 @@ namespace EasyboxClient.Sync
         private Socket s;
         private const int PORT = 6666;
         // IP地址
-        private IPAddress Addr = IPAddress.Parse("127.0.0.1"); 
+        private IPAddress Addr = IPAddress.Parse("117.121.25.234"); //xdtic
         String syncPath;
         FileWatcher Watcher;
         public TimingSyncThread(String hostName, String syncPath)
@@ -49,7 +49,7 @@ namespace EasyboxClient.Sync
                 }      
                 Watcher.StartWatch();
                 //设置同步时间
-                Thread.Sleep(10000);
+                Thread.Sleep(300000);
                 Watcher.StopWatch(); 
             }
         }
