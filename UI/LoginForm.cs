@@ -155,5 +155,10 @@ namespace EasyboxClient.UI
                 MessageBox.Show(FolderBrowserDialog1.SelectedPath, "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

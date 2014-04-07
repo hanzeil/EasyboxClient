@@ -61,41 +61,43 @@
             this.ToolStripLogout,
             this.ToolStripExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 76);
             // 
             // ToolStripChangeMenu
             // 
             this.ToolStripChangeMenu.Name = "ToolStripChangeMenu";
-            this.ToolStripChangeMenu.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripChangeMenu.Size = new System.Drawing.Size(138, 24);
             this.ToolStripChangeMenu.Text = "更改目录";
             this.ToolStripChangeMenu.Click += new System.EventHandler(this.ChangeMenu_Click);
             // 
             // ToolStripLogout
             // 
             this.ToolStripLogout.Name = "ToolStripLogout";
-            this.ToolStripLogout.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripLogout.Size = new System.Drawing.Size(138, 24);
             this.ToolStripLogout.Text = "注销";
             this.ToolStripLogout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // ToolStripExit
             // 
             this.ToolStripExit.Name = "ToolStripExit";
-            this.ToolStripExit.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripExit.Size = new System.Drawing.Size(138, 24);
             this.ToolStripExit.Text = "退出";
             this.ToolStripExit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 68);
+            this.textBox1.Location = new System.Drawing.Point(133, 85);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.Size = new System.Drawing.Size(132, 25);
             this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 124);
+            this.textBox2.Location = new System.Drawing.Point(133, 155);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
+            this.textBox2.Size = new System.Drawing.Size(132, 25);
             this.textBox2.TabIndex = 5;
             // 
             // button1
@@ -110,10 +112,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(143, 200);
+            this.button1.Location = new System.Drawing.Point(191, 250);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 18);
+            this.button1.Size = new System.Drawing.Size(43, 22);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -123,13 +125,14 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(221, 295);
+            this.pictureBox1.Size = new System.Drawing.Size(295, 369);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
@@ -143,19 +146,20 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(202, 0);
+            this.button2.Location = new System.Drawing.Point(269, 0);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(23, 23);
+            this.button2.Size = new System.Drawing.Size(31, 29);
             this.button2.TabIndex = 7;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(167, 248);
+            this.button3.Location = new System.Drawing.Point(223, 310);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 23);
+            this.button3.Size = new System.Drawing.Size(44, 29);
             this.button3.TabIndex = 8;
             this.button3.Text = "reg";
             this.button3.UseVisualStyleBackColor = true;
@@ -163,12 +167,12 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::EasyboxClient.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(225, 299);
+            this.ClientSize = new System.Drawing.Size(300, 374);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -176,6 +180,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

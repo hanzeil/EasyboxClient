@@ -84,7 +84,7 @@ namespace EasyboxClient.Sync
         }
         private String GetRelativePath(String path)
         {
-            return path.Substring(path.LastIndexOf(syncPath+"\\") + syncPath.Length);
+            return path.Substring(path.LastIndexOf(syncPath+"\\") + syncPath.Length+1);
         }
         private void SendStringByUTF8(String target)
         {

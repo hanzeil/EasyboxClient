@@ -49,7 +49,7 @@ namespace EasyboxClient.Sync
                 }      
                 Watcher.StartWatch();
                 //设置同步时间
-                Thread.Sleep(300000);
+                Thread.Sleep(10000);
                 Watcher.StopWatch(); 
             }
         }
