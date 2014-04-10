@@ -164,7 +164,7 @@ namespace EasyboxClient.UI
                 }
         }
         //双击托盘图标事件
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void notifyIcon1_MouseDoubleClick(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(FilePath);
         }
@@ -177,7 +177,8 @@ namespace EasyboxClient.UI
         private void Logout_Click(object sender, EventArgs e)
         {
             File.Delete("test.txt");
-            this.Close();
+            System.Environment.Exit(0);
+
         }
         //点击更改目录事件
         private void ChangeMenu_Click(object sender, EventArgs e)

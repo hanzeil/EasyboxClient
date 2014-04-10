@@ -46,7 +46,6 @@ namespace EasyboxClient.UserLogin
             else 
             {
                 querydb.AddUser(user, pass);
-                MessageBox.Show("注册成功", "消息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
         }

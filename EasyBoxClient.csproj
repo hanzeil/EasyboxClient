@@ -34,7 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Easybox_new.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=5.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -93,8 +94,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Easybox_new.ico" />
-    <Content Include="logo.ico" />
+    <Content Include="Resources\Easybox.ico" />
+    <Content Include="Resources\logo.ico" />
     <Content Include="Resources\UI.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

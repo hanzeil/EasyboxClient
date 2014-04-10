@@ -11,7 +11,6 @@ namespace EasyboxClient.UserLogin
     public class ConnectMysql
     {
         private String host="xdtic.com";
-        private String port="3306";
          #region  建立MySql数据库连接
         public MySqlConnection GetCon()
         {
