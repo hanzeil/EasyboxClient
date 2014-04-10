@@ -25,6 +25,8 @@ namespace EasyboxClient
         }
         static void Main()
         {
+
+            //测试
             //判断是否已经有一个该程序在运行
             if (new Program().CheckMultiInstance())
             {
