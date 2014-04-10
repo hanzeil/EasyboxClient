@@ -65,12 +65,6 @@
     <Compile Include="UI\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\RegisterForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\RegisterForm.Designer.cs">
-      <DependentUpon>RegisterForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserLogin\ConnectMysql.cs" />
     <Compile Include="UserLogin\QueryDatabase.cs" />
     <Compile Include="UserLogin\UserManager.cs" />
@@ -86,9 +80,6 @@
     </Compile>
     <EmbeddedResource Include="UI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\RegisterForm.resx">
-      <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">

@@ -41,7 +41,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.FolderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelRegist = new System.Windows.Forms.Label();
+            this.buttomRegister = new System.Windows.Forms.Button();
+            this.labelLogin = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -151,17 +153,41 @@
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
-            // label1
+            // labelRegist
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.Honeydew;
-            this.label1.Location = new System.Drawing.Point(24, 312);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "注册";
-            this.label1.Click += new System.EventHandler(this.buttonRegist_Click);
+            this.labelRegist.AutoSize = true;
+            this.labelRegist.BackColor = System.Drawing.Color.Transparent;
+            this.labelRegist.ForeColor = System.Drawing.Color.Honeydew;
+            this.labelRegist.Location = new System.Drawing.Point(24, 312);
+            this.labelRegist.Name = "labelRegist";
+            this.labelRegist.Size = new System.Drawing.Size(29, 12);
+            this.labelRegist.TabIndex = 8;
+            this.labelRegist.Text = "注册";
+            this.labelRegist.Click += new System.EventHandler(this.lableRegist_Click);
+            // 
+            // buttomRegister
+            // 
+            this.buttomRegister.Location = new System.Drawing.Point(97, 288);
+            this.buttomRegister.Name = "buttomRegister";
+            this.buttomRegister.Size = new System.Drawing.Size(32, 21);
+            this.buttomRegister.TabIndex = 9;
+            this.buttomRegister.Text = "Reg";
+            this.buttomRegister.UseVisualStyleBackColor = true;
+            this.buttomRegister.Visible = false;
+            this.buttomRegister.Click += new System.EventHandler(this.buttomRegister_Click);
+            // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.BackColor = System.Drawing.Color.Transparent;
+            this.labelLogin.ForeColor = System.Drawing.Color.Honeydew;
+            this.labelLogin.Location = new System.Drawing.Point(26, 312);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(29, 12);
+            this.labelLogin.TabIndex = 10;
+            this.labelLogin.Text = "登陆";
+            this.labelLogin.Visible = false;
+            this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
             // 
             // LoginForm
             // 
@@ -171,7 +197,9 @@
             this.BackgroundImage = global::EasyboxClient.Properties.Resources.UI;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(221, 350);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelLogin);
+            this.Controls.Add(this.buttomRegister);
+            this.Controls.Add(this.labelRegist);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPass);
@@ -203,7 +231,9 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripLogout;
         private System.Windows.Forms.ToolStripMenuItem ToolStripChangeMenu;
         private System.Windows.Forms.FolderBrowserDialog FolderBrowserDialog1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelRegist;
+        private System.Windows.Forms.Button buttomRegister;
+        private System.Windows.Forms.Label labelLogin;
     }
 }
 

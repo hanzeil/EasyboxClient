@@ -59,7 +59,22 @@ namespace EasyboxClient.UI
         }
 
 
-
+        //点击注册，跳转注册页面
+        private void lableRegist_Click(object sender, EventArgs e)
+        {
+            labelRegist.Visible = false;
+            labelLogin.Visible = true;
+            buttomRegister.Visible = true;
+            buttonLogin.Visible = false;
+        }
+        //点击登陆，跳转登陆页面
+        private void labelLogin_Click(object sender, EventArgs e)
+        {
+            labelRegist.Visible = true;
+            labelLogin.Visible = false;
+            buttomRegister.Visible = false;
+            buttonLogin.Visible = true;
+        }
         //单击登陆按钮事件
         private void buttonLogin_Click(object sender, EventArgs e)
         {
@@ -86,33 +101,16 @@ namespace EasyboxClient.UI
                 new Sync.TimingSyncThread(hostName, FilePath);
             }
         }
-        private void textBoxPass_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyValue == 13)//判断是否按下Enter键
-                buttonLogin_Click(sender, e);// btnLogin.Focus();//将鼠标焦点移动到“登录”按钮
-        }
+
 
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        //注册
-        private void buttonRegist_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RegisterForm reg = new RegisterForm();
-            DialogResult dr = reg.ShowDialog();
-            if (dr == DialogResult.OK)
-            {
-                this.Show();
-            }
-        }
-        //双击托盘图标事件
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            System.Diagnostics.Process.Start(FilePath);
-        }
+   
+
+
         //自动登陆
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -139,7 +137,37 @@ namespace EasyboxClient.UI
                 }
             }
         }
-
+     
+        //注册
+        private void buttomRegister_Click(object sender, EventArgs e)
+        {
+            UserLogin.UserManager usma = new UserLogin.UserManager();
+            usma.user = textBoxUser.Text;
+            //usma.pass = textBox2.Text;
+            usma.pass = UserLogin.UserManager.GetMD5Hash(textBoxPass.Text);
+            if (usma.Register())
+            {
+                MessageBox.Show("注册成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        //回车
+        private void textBoxPass_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)//判断是否按下Enter键
+                if (buttonLogin.Visible == true)
+                {
+                    buttonLogin_Click(sender, e);// btnLogin.Focus();//将鼠标焦点移动到“登录”按钮
+                }
+                else 
+                {
+                    buttomRegister_Click(sender, e);
+                }
+        }
+        //双击托盘图标事件
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            System.Diagnostics.Process.Start(FilePath);
+        }
         //点击退出事件
         private void Exit_Click(object sender, EventArgs e)
         {
@@ -160,6 +188,10 @@ namespace EasyboxClient.UI
                 MessageBox.Show(FolderBrowserDialog1.SelectedPath, "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+       
+
+ 
 
 
     }
