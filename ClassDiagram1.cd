@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EasyboxClient.Program" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEABAAAIAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyboxClient.Properties.Resources" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAIIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyboxClient.Properties.Settings" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyboxClient.Sync.FileWatcher" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAUAAAAAAIAACAAAAAAAEAgAAAgAAAAAIAAQ=</HashCode>
+      <FileName>Sync\FileWatcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyboxClient.Sync.ReceiveSync">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAIIAAAAAAAAAAAAAAAABAAAAAAAAMAAAEAAAAA=</HashCode>
+      <FileName>Sync\ReceiveSync.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyboxClient.Sync.SendSync">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIAoIIAAhAIAAAAAAAAEAAAAAAAAAAAMAAAEAAAAA=</HashCode>
+      <FileName>Sync\SendSync.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyboxClient.Sync.TimingSyncThread" Collapsed="true">
+    <Position X="2" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAoAIAAhAAAAAAAAAAAAAAAACAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Sync\TimingSyncThread.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyboxClient.UI.LoginForm" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kCAAIAQAACAACBAIAgChAAECQEA4BAAmEHBAAABAAAA=</HashCode>
+      <FileName>UI\LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyboxClient.UI.RegisterForm" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAAAIQAACAAABCAAAIAAAAEEAAAAAAAAA=</HashCode>
+      <FileName>UI\RegisterForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyboxClient.UserLogin.ConnectMysql">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAgAAAgAAAAAAAA=</HashCode>
+      <FileName>UserLogin\ConnectMysql.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyboxClient.UserLogin.QueryDatabase" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAACAAAAAAAAAgAAACAAAAAAA=</HashCode>
+      <FileName>UserLogin\QueryDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyboxClient.UserLogin.UserManager" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAEBAAAAAIAQAAAAAQA=</HashCode>
+      <FileName>UserLogin\UserManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
