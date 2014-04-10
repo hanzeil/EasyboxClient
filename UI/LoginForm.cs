@@ -61,12 +61,12 @@ namespace EasyboxClient.UI
 
 
         //单击登陆按钮事件
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
             UserLogin.UserManager usma = new UserLogin.UserManager();
-            usma.user = textBox1.Text;
+            usma.user = textBoxUser.Text;
             //usma.pass = textBox2.Text;
-            usma.pass = UserLogin.UserManager.GetMD5Hash(textBox2.Text);
+            usma.pass = UserLogin.UserManager.GetMD5Hash(textBoxPass.Text);
             if (usma.Login())
             {
                 //暂时先放在这，如果没有FilePath，则创建之，
@@ -86,14 +86,19 @@ namespace EasyboxClient.UI
                 new Sync.TimingSyncThread(hostName, FilePath);
             }
         }
+        private void textBoxPass_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)//判断是否按下Enter键
+                buttonLogin_Click(sender, e);// btnLogin.Focus();//将鼠标焦点移动到“登录”按钮
+        }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         //注册
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonRegist_Click(object sender, EventArgs e)
         {
             this.Hide();
             RegisterForm reg = new RegisterForm();
@@ -156,9 +161,6 @@ namespace EasyboxClient.UI
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

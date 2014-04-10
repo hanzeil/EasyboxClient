@@ -24,9 +24,9 @@ namespace EasyboxClient.UI
         private void button1_Click(object sender, EventArgs e)
         {
             UserLogin.UserManager usma = new UserLogin.UserManager();
-            usma.user = textBox1.Text;
+            usma.user = textBoxUser.Text;
             //usma.pass = textBox2.Text;
-            usma.pass = UserLogin.UserManager.GetMD5Hash(textBox2.Text);
+            usma.pass = UserLogin.UserManager.GetMD5Hash(textBoxPass.Text);
             if (usma.Register())
             {
                 this.Close();

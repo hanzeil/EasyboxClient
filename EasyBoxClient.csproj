@@ -102,9 +102,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\background.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Easybox_new.ico" />
     <Content Include="logo.ico" />
     <Content Include="Resources\UI.jpg" />
