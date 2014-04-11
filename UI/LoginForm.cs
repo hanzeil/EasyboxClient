@@ -208,5 +208,6 @@ namespace EasyboxClient.UI
                 t = new Sync.TimingSyncThread(hostName, FilePath);
             }
         }
+
     }
 }
