@@ -97,8 +97,10 @@
             // 
             this.textBoxPass.Location = new System.Drawing.Point(63, 230);
             this.textBoxPass.Name = "textBoxPass";
+            this.textBoxPass.PasswordChar = '*';
             this.textBoxPass.Size = new System.Drawing.Size(100, 21);
             this.textBoxPass.TabIndex = 5;
+            this.textBoxPass.Tag = "shisih";
             this.textBoxPass.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxPass_KeyUp);
             // 
             // buttonLogin

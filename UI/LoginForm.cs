@@ -99,6 +99,7 @@ namespace EasyboxClient.UI
                 File.SetAttributes("test.txt", FileAttributes.Hidden);
                 String hostName = usma.user + "+" + Dns.GetHostName();
                 t=new Sync.TimingSyncThread(hostName, FilePath);
+                
             }
         }
 
@@ -123,6 +124,7 @@ namespace EasyboxClient.UI
                 FilePath = sr.ReadLine();
                 usma.user = sr.ReadLine();
                 usma.pass = sr.ReadToEnd();
+                sr.Close();
                 if (usma.Login())
                 {
                     this.notifyIcon1.Visible = true;
@@ -181,7 +183,10 @@ namespace EasyboxClient.UI
             File.Delete("test.txt");
             //重启程序
             t.Abort();
+            textBoxUser.Text = "";
+            textBoxPass.Text = "";
             this.Show();
+            this.ShowInTaskbar = true;
             
         }
         //点击更改目录事件
@@ -190,9 +195,17 @@ namespace EasyboxClient.UI
             if (FolderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 FilePath = FolderBrowserDialog1.SelectedPath;
-                MessageBox.Show(FolderBrowserDialog1.SelectedPath, "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //重启程序
                 t.Abort();
+                File.Delete("test.txt");
+                StreamWriter sw = new StreamWriter("test.txt", false);
+                sw.WriteLine(FilePath);
+                sw.WriteLine(textBoxUser.Text);
+                sw.Write(UserLogin.UserManager.GetMD5Hash(textBoxPass.Text));
+                sw.Close();
+                File.SetAttributes("test.txt", FileAttributes.Hidden);
+                String hostName = textBoxUser.Text + "+" + Dns.GetHostName();
+                t = new Sync.TimingSyncThread(hostName, FilePath);
             }
         }
     }
