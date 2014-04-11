@@ -18,12 +18,13 @@ namespace EasyboxClient.Sync
         private IPAddress Addr = IPAddress.Parse("117.121.25.234"); //xdtic
         String syncPath;
         FileWatcher Watcher;
+        Thread t;
         public TimingSyncThread(String hostName, String syncPath)
         {
             Watcher = new FileWatcher(hostName, syncPath);
             this.hostName = hostName;
             this.syncPath = syncPath;
-            Thread t = new Thread(new ThreadStart(run));
+            t = new Thread(new ThreadStart(run));
             t.Start();
         }
         public void run()
@@ -58,6 +59,10 @@ namespace EasyboxClient.Sync
             byte[] buf = System.Text.Encoding.UTF8.GetBytes(target);
             s.Send(buf, buf.Length, SocketFlags.None);
             Thread.Sleep(500);
+        }
+        public void Abort(){
+            t.Abort();
+            Watcher.Abort();
         }
     }
 }

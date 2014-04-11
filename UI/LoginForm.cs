@@ -13,13 +13,13 @@ namespace EasyboxClient.UI
 {
     public partial class LoginForm : Form
     {
+        Sync.TimingSyncThread t;
         public LoginForm()
         {
             InitializeComponent();
         }
 
         //--------窗体拖动---------
-
         Point mouseOff;//鼠标移动位置变量
 
         bool leftFlag;//标签是否为左键
@@ -98,7 +98,7 @@ namespace EasyboxClient.UI
                 sw.Close();
                 File.SetAttributes("test.txt", FileAttributes.Hidden);
                 String hostName = usma.user + "+" + Dns.GetHostName();
-                new Sync.TimingSyncThread(hostName, FilePath);
+                t=new Sync.TimingSyncThread(hostName, FilePath);
             }
         }
 
@@ -127,7 +127,7 @@ namespace EasyboxClient.UI
                 {
                     this.notifyIcon1.Visible = true;
                     string hostName = usma.user + "+" + Dns.GetHostName();
-                    new Sync.TimingSyncThread(hostName, FilePath);
+                    t=new Sync.TimingSyncThread(hostName, FilePath);
 
                 }
                 else 
@@ -171,14 +171,18 @@ namespace EasyboxClient.UI
         //点击退出事件
         private void Exit_Click(object sender, EventArgs e)
         {
-            System.Environment.Exit(0);
+            //退出同步线程
+            t.Abort();
+            Application.Exit();
         }
         //点击注销事件
         private void Logout_Click(object sender, EventArgs e)
         {
             File.Delete("test.txt");
-            System.Environment.Exit(0);
-
+            //重启程序
+            t.Abort();
+            this.Show();
+            
         }
         //点击更改目录事件
         private void ChangeMenu_Click(object sender, EventArgs e)
@@ -187,13 +191,9 @@ namespace EasyboxClient.UI
             {
                 FilePath = FolderBrowserDialog1.SelectedPath;
                 MessageBox.Show(FolderBrowserDialog1.SelectedPath, "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //重启程序
+                t.Abort();
             }
         }
-
-       
-
- 
-
-
     }
 }

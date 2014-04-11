@@ -17,6 +17,7 @@ namespace EasyboxClient.Sync
         private String hostName;
         private String syncType;
         private String syncPath;
+        Thread t;
         // IP地址
         private IPAddress Addr = IPAddress.Parse("117.121.25.234");  // xdtic
         // 指定端口
@@ -29,7 +30,7 @@ namespace EasyboxClient.Sync
             this.hostName = hostName;
             this.syncType = syncType;
             this.syncPath = syncPath;
-            Thread t = new Thread(new ThreadStart(run));
+            t = new Thread(new ThreadStart(run));
             t.Start();
         }
         public void run()
@@ -91,6 +92,9 @@ namespace EasyboxClient.Sync
             byte[] buf = System.Text.Encoding.UTF8.GetBytes(target);
             s.Send(buf, buf.Length, SocketFlags.None);
             Thread.Sleep(500);
+        }
+        public void Abort(){
+            t.Abort();
         }
     }
 }

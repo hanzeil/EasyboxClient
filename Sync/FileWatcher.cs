@@ -16,6 +16,7 @@ namespace EasyboxClient.Sync
         string LastChangeFileName;
         string path;
         string hostName;
+        SendSync sendSync1 = null, sendSync2 = null, sendSync3 = null, sendSync4 = null;
         public FileWatcher(string hostName,string path)
         {
             this.hostName = hostName;
@@ -49,7 +50,7 @@ namespace EasyboxClient.Sync
             //if ((!(LastChangeFileName == e.Name)) )
             if ((!(LastChangeFileName == e.Name)) && (!IsTmpFile(e.Name)))
             {
-                new SendSync("Send", hostName, e.FullPath,path);
+                sendSync1=new SendSync("Send", hostName, e.FullPath,path);
                 LastChangeFileName = e.Name;
                 // 100ms 后取消对重复文件改变的屏蔽
                 Thread th = new Thread(new ThreadStart(
@@ -67,7 +68,7 @@ namespace EasyboxClient.Sync
         {
             if (!IsTmpFile(e.Name))
             {
-                new SendSync("Delete", hostName, e.FullPath, path);
+                sendSync2 = new SendSync("Delete", hostName, e.FullPath, path);
             }
 
         }
@@ -76,8 +77,8 @@ namespace EasyboxClient.Sync
         {
             if (!IsTmpFile(e.Name))
             {
-                new SendSync("Delete", hostName, e.OldFullPath, path);
-                new SendSync("Send", hostName, e.FullPath, path);
+                sendSync3 = new SendSync("Delete", hostName, e.OldFullPath, path);
+                sendSync4 = new SendSync("Send", hostName, e.FullPath, path);
             }
            // Console.WriteLine("File: {0} renamed to {1}", e.OldFullPath, e.FullPath);
         }
@@ -89,6 +90,13 @@ namespace EasyboxClient.Sync
                 return true;
             else*/
                 return false;
+        }
+        public void Abort(){
+            StopWatch();
+            if (sendSync1 != null) { sendSync1.Abort(); }
+            if (sendSync2 != null) { sendSync2.Abort(); }
+            if (sendSync3 != null) { sendSync3.Abort(); }
+            if (sendSync4 != null) { sendSync4.Abort(); }
         }
     }
 }
