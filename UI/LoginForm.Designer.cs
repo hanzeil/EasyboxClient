@@ -63,42 +63,44 @@
             this.ToolStripLogout,
             this.ToolStripExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 76);
             // 
             // ToolStripChangeMenu
             // 
             this.ToolStripChangeMenu.Name = "ToolStripChangeMenu";
-            this.ToolStripChangeMenu.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripChangeMenu.Size = new System.Drawing.Size(138, 24);
             this.ToolStripChangeMenu.Text = "更改目录";
             this.ToolStripChangeMenu.Click += new System.EventHandler(this.ChangeMenu_Click);
             // 
             // ToolStripLogout
             // 
             this.ToolStripLogout.Name = "ToolStripLogout";
-            this.ToolStripLogout.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripLogout.Size = new System.Drawing.Size(138, 24);
             this.ToolStripLogout.Text = "注销";
             this.ToolStripLogout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // ToolStripExit
             // 
             this.ToolStripExit.Name = "ToolStripExit";
-            this.ToolStripExit.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripExit.Size = new System.Drawing.Size(138, 24);
             this.ToolStripExit.Text = "退出";
             this.ToolStripExit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // textBoxUser
             // 
-            this.textBoxUser.Location = new System.Drawing.Point(63, 181);
+            this.textBoxUser.Location = new System.Drawing.Point(84, 226);
+            this.textBoxUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxUser.Name = "textBoxUser";
-            this.textBoxUser.Size = new System.Drawing.Size(100, 21);
+            this.textBoxUser.Size = new System.Drawing.Size(132, 25);
             this.textBoxUser.TabIndex = 4;
             // 
             // textBoxPass
             // 
-            this.textBoxPass.Location = new System.Drawing.Point(63, 230);
+            this.textBoxPass.Location = new System.Drawing.Point(84, 288);
+            this.textBoxPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.PasswordChar = '*';
-            this.textBoxPass.Size = new System.Drawing.Size(100, 21);
+            this.textBoxPass.Size = new System.Drawing.Size(132, 25);
             this.textBoxPass.TabIndex = 5;
             this.textBoxPass.Tag = "shisih";
             this.textBoxPass.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxPass_KeyUp);
@@ -113,10 +115,10 @@
             this.buttonLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonLogin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonLogin.Location = new System.Drawing.Point(97, 288);
+            this.buttonLogin.Location = new System.Drawing.Point(129, 360);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(0);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(32, 21);
+            this.buttonLogin.Size = new System.Drawing.Size(43, 26);
             this.buttonLogin.TabIndex = 6;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -130,7 +132,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(221, 350);
+            this.pictureBox1.Size = new System.Drawing.Size(295, 438);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -147,10 +149,10 @@
             this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonExit.Location = new System.Drawing.Point(202, 0);
+            this.buttonExit.Location = new System.Drawing.Point(269, 0);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(23, 23);
+            this.buttonExit.Size = new System.Drawing.Size(31, 29);
             this.buttonExit.TabIndex = 7;
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
@@ -160,18 +162,20 @@
             this.labelRegist.AutoSize = true;
             this.labelRegist.BackColor = System.Drawing.Color.Transparent;
             this.labelRegist.ForeColor = System.Drawing.Color.Honeydew;
-            this.labelRegist.Location = new System.Drawing.Point(24, 312);
+            this.labelRegist.Location = new System.Drawing.Point(32, 390);
+            this.labelRegist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRegist.Name = "labelRegist";
-            this.labelRegist.Size = new System.Drawing.Size(29, 12);
+            this.labelRegist.Size = new System.Drawing.Size(37, 15);
             this.labelRegist.TabIndex = 8;
             this.labelRegist.Text = "注册";
             this.labelRegist.Click += new System.EventHandler(this.lableRegist_Click);
             // 
             // buttomRegister
             // 
-            this.buttomRegister.Location = new System.Drawing.Point(97, 288);
+            this.buttomRegister.Location = new System.Drawing.Point(129, 360);
+            this.buttomRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttomRegister.Name = "buttomRegister";
-            this.buttomRegister.Size = new System.Drawing.Size(32, 21);
+            this.buttomRegister.Size = new System.Drawing.Size(43, 26);
             this.buttomRegister.TabIndex = 9;
             this.buttomRegister.Text = "Reg";
             this.buttomRegister.UseVisualStyleBackColor = true;
@@ -183,9 +187,10 @@
             this.labelLogin.AutoSize = true;
             this.labelLogin.BackColor = System.Drawing.Color.Transparent;
             this.labelLogin.ForeColor = System.Drawing.Color.Honeydew;
-            this.labelLogin.Location = new System.Drawing.Point(26, 312);
+            this.labelLogin.Location = new System.Drawing.Point(35, 390);
+            this.labelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(29, 12);
+            this.labelLogin.Size = new System.Drawing.Size(37, 15);
             this.labelLogin.TabIndex = 10;
             this.labelLogin.Text = "登陆";
             this.labelLogin.Visible = false;
@@ -193,12 +198,12 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::EasyboxClient.Properties.Resources.UI;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(221, 350);
+            this.ClientSize = new System.Drawing.Size(295, 438);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.buttomRegister);
             this.Controls.Add(this.labelRegist);
@@ -209,6 +214,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
