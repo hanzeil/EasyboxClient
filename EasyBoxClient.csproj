@@ -95,7 +95,6 @@
   <ItemGroup>
     <Content Include="Easybox.ico" />
     <Content Include="Resources\Easybox.ico" />
-    <Content Include="Resources\logo.ico" />
     <Content Include="Resources\UI.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

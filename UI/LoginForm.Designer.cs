@@ -89,7 +89,7 @@
             // textBoxUser
             // 
             this.textBoxUser.Location = new System.Drawing.Point(84, 226);
-            this.textBoxUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxUser.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUser.Name = "textBoxUser";
             this.textBoxUser.Size = new System.Drawing.Size(132, 25);
             this.textBoxUser.TabIndex = 4;
@@ -97,7 +97,7 @@
             // textBoxPass
             // 
             this.textBoxPass.Location = new System.Drawing.Point(84, 288);
-            this.textBoxPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPass.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.PasswordChar = '*';
             this.textBoxPass.Size = new System.Drawing.Size(132, 25);
@@ -132,7 +132,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(295, 438);
+            this.pictureBox1.Size = new System.Drawing.Size(287, 456);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -149,7 +149,7 @@
             this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonExit.Location = new System.Drawing.Point(269, 0);
+            this.buttonExit.Location = new System.Drawing.Point(255, 0);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(31, 29);
@@ -173,7 +173,7 @@
             // buttomRegister
             // 
             this.buttomRegister.Location = new System.Drawing.Point(129, 360);
-            this.buttomRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttomRegister.Margin = new System.Windows.Forms.Padding(4);
             this.buttomRegister.Name = "buttomRegister";
             this.buttomRegister.Size = new System.Drawing.Size(43, 26);
             this.buttomRegister.TabIndex = 9;
@@ -203,7 +203,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::EasyboxClient.Properties.Resources.UI;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(295, 438);
+            this.ClientSize = new System.Drawing.Size(287, 456);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.buttomRegister);
             this.Controls.Add(this.labelRegist);
@@ -214,7 +214,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
