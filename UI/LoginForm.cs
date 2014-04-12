@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Net;
+using System.Threading;
 
 namespace EasyboxClient.UI
 {
@@ -62,13 +63,7 @@ namespace EasyboxClient.UI
 
 
         //点击注册，跳转注册页面
-        private void lableRegist_Click(object sender, EventArgs e)
-        {
-        }
-        //点击登陆，跳转登陆页面
-        private void labelLogin_Click(object sender, EventArgs e)
-        {
-        }
+
         //单击登陆按钮事件
         private void buttonLogin_Click(object sender, EventArgs e)
         {
@@ -156,7 +151,7 @@ namespace EasyboxClient.UI
                 }
                 else 
                 {
-                    //buttomRegister_Click(sender, e);
+                    buttonRegister_Click(sender, e);
                 }
         }
         //双击托盘图标事件
@@ -208,7 +203,7 @@ namespace EasyboxClient.UI
         }
         private void textBoxUser_KeyDown(object sender, KeyEventArgs e)
         {
-            if (textBoxUser.Text == "Username")
+           if (textBoxUser.Text == "Username")
             {
                 textBoxUser.Text = "";
                 textBoxUser.ForeColor = Color.Black;
@@ -228,7 +223,6 @@ namespace EasyboxClient.UI
             if (textBoxPass.Text == "Password")
             {
                 textBoxPass.Text = "";
-                textBoxPass.PasswordChar = '*';
                 textBoxPass.ForeColor = Color.Black;
 
             }
@@ -237,20 +231,28 @@ namespace EasyboxClient.UI
         {
             if (textBoxPass.Text == "")
             {
-                textBoxPass.Text = "Passwrod";
+                textBoxPass.Text = "Password";
                 textBoxPass.ForeColor = Color.Silver;
             }
         }
-
-        private void textBoxPass_TextChanged(object sender, EventArgs e)
+        private void TurnToReg_Click(object sender, EventArgs e)
         {
-
+            TurnToReg.Visible=false;
+            loginButtonBox.Visible = false;
+            Thread.Sleep(300);
+            TurnToLogin.Visible = true;
+            registButtonBox.Visible = true;
+            
+        }
+        private void TurnToLogin_Click(object sender, EventArgs e)
+        {
+            TurnToLogin.Visible = false;
+            registButtonBox.Visible = false;
+            Thread.Sleep(300);
+            TurnToReg.Visible = true;
+            loginButtonBox.Visible = true;
         }
 
-        private void registerButtionBox_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
     }
