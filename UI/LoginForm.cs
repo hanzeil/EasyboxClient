@@ -145,7 +145,7 @@ namespace EasyboxClient.UI
         private void textBoxPass_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == 13)//判断是否按下Enter键
-                if (loginButtonBox.Visible == true)
+                if (buttonBoxLogin.Visible == true)
                 {
                     buttonLogin_Click(sender, e);// btnLogin.Focus();//将鼠标焦点移动到“登录”按钮
                 }
@@ -238,19 +238,79 @@ namespace EasyboxClient.UI
         private void TurnToReg_Click(object sender, EventArgs e)
         {
             TurnToReg.Visible=false;
-            loginButtonBox.Visible = false;
+            buttonBoxLogin.Visible = false;
             Thread.Sleep(300);
             TurnToLogin.Visible = true;
-            registButtonBox.Visible = true;
+            buttonBoxRegister.Visible = true;
             
         }
         private void TurnToLogin_Click(object sender, EventArgs e)
         {
             TurnToLogin.Visible = false;
-            registButtonBox.Visible = false;
+            buttonBoxRegister.Visible = false;
             Thread.Sleep(300);
             TurnToReg.Visible = true;
-            loginButtonBox.Visible = true;
+            buttonBoxLogin.Visible = true;
+        }
+
+        private void buttonBoxLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.buttonBoxLogin.Image = global::EasyboxClient.Properties.Resources.Right_down;
+        }
+
+        private void buttonBoxLogin_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.buttonBoxLogin.Image = global::EasyboxClient.Properties.Resources.Right_move;
+        }
+
+        private void buttonBoxLogin_MouseLeave(object sender, EventArgs e)
+        {
+            this.buttonBoxLogin.Image = global::EasyboxClient.Properties.Resources.Right;
+        }
+
+        private void TurnToLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.TurnToLogin.Image = global::EasyboxClient.Properties.Resources.Left_down;
+        }
+
+        private void TurnToLogin_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.TurnToLogin.Image = global::EasyboxClient.Properties.Resources.Left_move;
+        }
+
+        private void TurnToLogin_MouseLeave(object sender, EventArgs e)
+        {
+            this.TurnToLogin.Image = global::EasyboxClient.Properties.Resources.Left;
+        }
+
+        private void TurnToReg_DragLeave(object sender, EventArgs e)
+        {
+            this.TurnToReg.Image = global::EasyboxClient.Properties.Resources.Register;
+        }
+
+        private void TurnToReg_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.TurnToReg.Image = global::EasyboxClient.Properties.Resources.Register_move;
+        }
+
+        private void TurnToReg_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.TurnToReg.Image = global::EasyboxClient.Properties.Resources.Register_down;
+        }
+
+        private void buttonBoxRegister_MouseLeave(object sender, EventArgs e)
+        {
+            this.buttonBoxRegister.Image = global::EasyboxClient.Properties.Resources.Right;
+        }
+
+        private void buttonBoxRegister_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.buttonBoxRegister.Image = global::EasyboxClient.Properties.Resources.Right_down;
+        }
+
+        private void buttonBoxRegister_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.buttonBoxRegister.Image = global::EasyboxClient.Properties.Resources.Right_move;
         }
 
 

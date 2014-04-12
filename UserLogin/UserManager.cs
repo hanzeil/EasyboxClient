@@ -13,7 +13,7 @@ namespace EasyboxClient.UserLogin
         public String pass;
         QueryDatabase querydb=new QueryDatabase();
         public bool Login(){
-            if (user == string.Empty)
+            if (user == string.Empty || user.Equals("Username"))
             {
                 MessageBox.Show("用户名称不能为空！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -33,7 +33,7 @@ namespace EasyboxClient.UserLogin
         }
         public bool Register()
         {
-            if (user == string.Empty)
+            if (user == string.Empty || user.Equals("Username"))
             {
                 MessageBox.Show("用户名称不能为空！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
