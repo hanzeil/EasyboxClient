@@ -98,6 +98,7 @@
     <None Include="Resources\Left.png" />
     <Content Include="Resources\login.png" />
     <None Include="Resources\Right.png" />
+    <None Include="Resources\Register.png" />
     <Content Include="Resources\UI.jpg" />
     <None Include="Resources\用户名1.png" />
     <None Include="Resources\用户名0.png" />

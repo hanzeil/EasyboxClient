@@ -64,18 +64,10 @@ namespace EasyboxClient.UI
         //点击注册，跳转注册页面
         private void lableRegist_Click(object sender, EventArgs e)
         {
-            labelRegist.Visible = false;
-            labelLogin.Visible = true;
-            //buttomRegister.Visible = true;
-            //buttonLogin.Visible = false;
         }
         //点击登陆，跳转登陆页面
         private void labelLogin_Click(object sender, EventArgs e)
         {
-            labelRegist.Visible = true;
-            labelLogin.Visible = false;
-            //buttomRegister.Visible = false;
-            //buttonLogin.Visible = true;
         }
         //单击登陆按钮事件
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -248,6 +240,16 @@ namespace EasyboxClient.UI
                 textBoxPass.Text = "Passwrod";
                 textBoxPass.ForeColor = Color.Silver;
             }
+        }
+
+        private void textBoxPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registerButtionBox_Click(object sender, EventArgs e)
+        {
+
         }
 
 
