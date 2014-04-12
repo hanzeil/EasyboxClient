@@ -36,20 +36,23 @@
             this.ToolStripLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripExit = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.FolderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxUser = new System.Windows.Forms.TextBox();
-            this.buttonBoxLogin = new System.Windows.Forms.PictureBox();
+            this.buttonLogin = new System.Windows.Forms.PictureBox();
             this.TurnToReg = new System.Windows.Forms.PictureBox();
             this.TurnToLogin = new System.Windows.Forms.PictureBox();
-            this.buttonBoxRegister = new System.Windows.Forms.PictureBox();
+            this.buttonRegister = new System.Windows.Forms.PictureBox();
+            this.buttonExit = new System.Windows.Forms.PictureBox();
+            this.buttonMin = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonBoxLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurnToReg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurnToLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonBoxRegister)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonRegister)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonMin)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -106,33 +109,16 @@
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonExit.Location = new System.Drawing.Point(309, 0);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(31, 29);
-            this.buttonExit.TabIndex = 7;
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
             // textBoxPass
             // 
             this.textBoxPass.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPass.Font = new System.Drawing.Font("Calibri", 12F);
+            this.textBoxPass.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPass.ForeColor = System.Drawing.Color.Silver;
-            this.textBoxPass.Location = new System.Drawing.Point(104, 359);
+            this.textBoxPass.Location = new System.Drawing.Point(104, 358);
             this.textBoxPass.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPass.Name = "textBoxPass";
-            this.textBoxPass.Size = new System.Drawing.Size(175, 25);
+            this.textBoxPass.Size = new System.Drawing.Size(175, 27);
             this.textBoxPass.TabIndex = 5;
             this.textBoxPass.Tag = "";
             this.textBoxPass.Text = "Password";
@@ -144,32 +130,32 @@
             // textBoxUser
             // 
             this.textBoxUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUser.Font = new System.Drawing.Font("Calibri", 12F);
+            this.textBoxUser.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUser.ForeColor = System.Drawing.Color.Silver;
-            this.textBoxUser.Location = new System.Drawing.Point(103, 310);
+            this.textBoxUser.Location = new System.Drawing.Point(103, 309);
             this.textBoxUser.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUser.Name = "textBoxUser";
-            this.textBoxUser.Size = new System.Drawing.Size(176, 25);
+            this.textBoxUser.Size = new System.Drawing.Size(176, 27);
             this.textBoxUser.TabIndex = 4;
             this.textBoxUser.Text = "Username";
             this.textBoxUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUser_KeyDown);
             this.textBoxUser.Validated += new System.EventHandler(this.textBoxUser_Validated);
             // 
-            // buttonBoxLogin
+            // buttonLogin
             // 
-            this.buttonBoxLogin.BackColor = System.Drawing.Color.Transparent;
-            this.buttonBoxLogin.Image = global::EasyboxClient.Properties.Resources.Right;
-            this.buttonBoxLogin.Location = new System.Drawing.Point(219, 425);
-            this.buttonBoxLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonBoxLogin.Name = "buttonBoxLogin";
-            this.buttonBoxLogin.Size = new System.Drawing.Size(61, 58);
-            this.buttonBoxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.buttonBoxLogin.TabIndex = 11;
-            this.buttonBoxLogin.TabStop = false;
-            this.buttonBoxLogin.Click += new System.EventHandler(this.buttonLogin_Click);
-            this.buttonBoxLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonBoxLogin_MouseDown);
-            this.buttonBoxLogin.MouseLeave += new System.EventHandler(this.buttonBoxLogin_MouseLeave);
-            this.buttonBoxLogin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonBoxLogin_MouseMove);
+            this.buttonLogin.BackColor = System.Drawing.Color.Transparent;
+            this.buttonLogin.Image = global::EasyboxClient.Properties.Resources.Right;
+            this.buttonLogin.Location = new System.Drawing.Point(219, 425);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(61, 58);
+            this.buttonLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buttonLogin.TabIndex = 11;
+            this.buttonLogin.TabStop = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.buttonLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonBoxLogin_MouseDown);
+            this.buttonLogin.MouseLeave += new System.EventHandler(this.buttonBoxLogin_MouseLeave);
+            this.buttonLogin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonBoxLogin_MouseMove);
             // 
             // TurnToReg
             // 
@@ -204,22 +190,52 @@
             this.TurnToLogin.MouseLeave += new System.EventHandler(this.TurnToLogin_MouseLeave);
             this.TurnToLogin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TurnToLogin_MouseMove);
             // 
-            // buttonBoxRegister
+            // buttonRegister
             // 
-            this.buttonBoxRegister.BackColor = System.Drawing.Color.Transparent;
-            this.buttonBoxRegister.Image = global::EasyboxClient.Properties.Resources.Right;
-            this.buttonBoxRegister.Location = new System.Drawing.Point(219, 425);
-            this.buttonBoxRegister.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonBoxRegister.Name = "buttonBoxRegister";
-            this.buttonBoxRegister.Size = new System.Drawing.Size(61, 58);
-            this.buttonBoxRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.buttonBoxRegister.TabIndex = 14;
-            this.buttonBoxRegister.TabStop = false;
-            this.buttonBoxRegister.Visible = false;
-            this.buttonBoxRegister.Click += new System.EventHandler(this.buttonRegister_Click);
-            this.buttonBoxRegister.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonBoxRegister_MouseDown);
-            this.buttonBoxRegister.MouseLeave += new System.EventHandler(this.buttonBoxRegister_MouseLeave);
-            this.buttonBoxRegister.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonBoxRegister_MouseMove);
+            this.buttonRegister.BackColor = System.Drawing.Color.Transparent;
+            this.buttonRegister.Image = global::EasyboxClient.Properties.Resources.Right;
+            this.buttonRegister.Location = new System.Drawing.Point(219, 425);
+            this.buttonRegister.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(61, 58);
+            this.buttonRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buttonRegister.TabIndex = 14;
+            this.buttonRegister.TabStop = false;
+            this.buttonRegister.Visible = false;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            this.buttonRegister.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonBoxRegister_MouseDown);
+            this.buttonRegister.MouseLeave += new System.EventHandler(this.buttonBoxRegister_MouseLeave);
+            this.buttonRegister.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonBoxRegister_MouseMove);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.Transparent;
+            this.buttonExit.Image = global::EasyboxClient.Properties.Resources.Close;
+            this.buttonExit.Location = new System.Drawing.Point(292, 0);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(57, 26);
+            this.buttonExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buttonExit.TabIndex = 15;
+            this.buttonExit.TabStop = false;
+            this.buttonExit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonExit_MouseClick);
+            this.buttonExit.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonExit_MouseDown);
+            this.buttonExit.MouseLeave += new System.EventHandler(this.buttonExit_MouseLeave);
+            this.buttonExit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonExit_MouseMove);
+            // 
+            // buttonMin
+            // 
+            this.buttonMin.BackColor = System.Drawing.Color.Transparent;
+            this.buttonMin.Image = global::EasyboxClient.Properties.Resources.Min;
+            this.buttonMin.Location = new System.Drawing.Point(259, 0);
+            this.buttonMin.Name = "buttonMin";
+            this.buttonMin.Size = new System.Drawing.Size(34, 26);
+            this.buttonMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buttonMin.TabIndex = 16;
+            this.buttonMin.TabStop = false;
+            this.buttonMin.Click += new System.EventHandler(this.buttonMin_Click);
+            this.buttonMin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMin_MouseDown);
+            this.buttonMin.MouseLeave += new System.EventHandler(this.buttonMin_MouseLeave);
+            this.buttonMin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMin_MouseMove);
             // 
             // LoginForm
             // 
@@ -229,13 +245,14 @@
             this.BackgroundImage = global::EasyboxClient.Properties.Resources.UI;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(349, 554);
-            this.Controls.Add(this.buttonBoxRegister);
+            this.Controls.Add(this.buttonMin);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.TurnToLogin);
             this.Controls.Add(this.TurnToReg);
-            this.Controls.Add(this.buttonBoxLogin);
+            this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPass);
             this.Controls.Add(this.textBoxUser);
-            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -247,10 +264,12 @@
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonBoxLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurnToReg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurnToLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonBoxRegister)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonRegister)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonMin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,14 +283,15 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBoxUser;
         private System.Windows.Forms.TextBox textBoxPass;
-        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.ToolStripMenuItem ToolStripLogout;
         private System.Windows.Forms.ToolStripMenuItem ToolStripChangeMenu;
         private System.Windows.Forms.FolderBrowserDialog FolderBrowserDialog1;
-        private System.Windows.Forms.PictureBox buttonBoxLogin;
+        private System.Windows.Forms.PictureBox buttonLogin;
         private System.Windows.Forms.PictureBox TurnToReg;
         private System.Windows.Forms.PictureBox TurnToLogin;
-        private System.Windows.Forms.PictureBox buttonBoxRegister;
+        private System.Windows.Forms.PictureBox buttonRegister;
+        private System.Windows.Forms.PictureBox buttonExit;
+        private System.Windows.Forms.PictureBox buttonMin;
     }
 }
 

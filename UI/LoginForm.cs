@@ -145,7 +145,7 @@ namespace EasyboxClient.UI
         private void textBoxPass_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == 13)//判断是否按下Enter键
-                if (buttonBoxLogin.Visible == true)
+                if (buttonLogin.Visible == true)
                 {
                     buttonLogin_Click(sender, e);// btnLogin.Focus();//将鼠标焦点移动到“登录”按钮
                 }
@@ -238,34 +238,34 @@ namespace EasyboxClient.UI
         private void TurnToReg_Click(object sender, EventArgs e)
         {
             TurnToReg.Visible=false;
-            buttonBoxLogin.Visible = false;
+            buttonLogin.Visible = false;
             Thread.Sleep(300);
             TurnToLogin.Visible = true;
-            buttonBoxRegister.Visible = true;
+            buttonRegister.Visible = true;
             
         }
         private void TurnToLogin_Click(object sender, EventArgs e)
         {
             TurnToLogin.Visible = false;
-            buttonBoxRegister.Visible = false;
+            buttonRegister.Visible = false;
             Thread.Sleep(300);
             TurnToReg.Visible = true;
-            buttonBoxLogin.Visible = true;
+            buttonLogin.Visible = true;
         }
 
         private void buttonBoxLogin_MouseDown(object sender, MouseEventArgs e)
         {
-            this.buttonBoxLogin.Image = global::EasyboxClient.Properties.Resources.Right_down;
+            this.buttonLogin.Image = global::EasyboxClient.Properties.Resources.Right_down;
         }
 
         private void buttonBoxLogin_MouseMove(object sender, MouseEventArgs e)
         {
-            this.buttonBoxLogin.Image = global::EasyboxClient.Properties.Resources.Right_move;
+            this.buttonLogin.Image = global::EasyboxClient.Properties.Resources.Right_move;
         }
 
         private void buttonBoxLogin_MouseLeave(object sender, EventArgs e)
         {
-            this.buttonBoxLogin.Image = global::EasyboxClient.Properties.Resources.Right;
+            this.buttonLogin.Image = global::EasyboxClient.Properties.Resources.Right;
         }
 
         private void TurnToLogin_MouseDown(object sender, MouseEventArgs e)
@@ -300,20 +300,57 @@ namespace EasyboxClient.UI
 
         private void buttonBoxRegister_MouseLeave(object sender, EventArgs e)
         {
-            this.buttonBoxRegister.Image = global::EasyboxClient.Properties.Resources.Right;
+            this.buttonRegister.Image = global::EasyboxClient.Properties.Resources.Right;
         }
 
         private void buttonBoxRegister_MouseDown(object sender, MouseEventArgs e)
         {
-            this.buttonBoxRegister.Image = global::EasyboxClient.Properties.Resources.Right_down;
+            this.buttonRegister.Image = global::EasyboxClient.Properties.Resources.Right_down;
         }
 
         private void buttonBoxRegister_MouseMove(object sender, MouseEventArgs e)
         {
-            this.buttonBoxRegister.Image = global::EasyboxClient.Properties.Resources.Right_move;
+            this.buttonRegister.Image = global::EasyboxClient.Properties.Resources.Right_move;
         }
 
+        private void buttonExit_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.buttonExit.Image = global::EasyboxClient.Properties.Resources.Close_down;
+        }
 
+        private void buttonExit_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.buttonExit.Image = global::EasyboxClient.Properties.Resources.Close_move;
+        }
 
+        private void buttonExit_MouseLeave(object sender, EventArgs e)
+        {
+            this.buttonExit.Image = global::EasyboxClient.Properties.Resources.Close;
+        }
+
+        private void buttonExit_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonMin_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.buttonMin.Image = global::EasyboxClient.Properties.Resources.Min_Down;
+        }
+
+        private void buttonMin_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.buttonMin.Image = global::EasyboxClient.Properties.Resources.Min_move;
+        }
+
+        private void buttonMin_MouseLeave(object sender, EventArgs e)
+        {
+            this.buttonMin.Image = global::EasyboxClient.Properties.Resources.Min;
+        }
+
+        private void buttonMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
