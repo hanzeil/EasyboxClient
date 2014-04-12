@@ -17,6 +17,8 @@ namespace EasyboxClient.UI
         public LoginForm()
         {
             InitializeComponent();
+            textBoxUser.SelectionStart = 0;
+            textBoxPass.SelectionStart = 0;
         }
 
         //--------窗体拖动---------
@@ -141,7 +143,7 @@ namespace EasyboxClient.UI
         }
      
         //注册
-        private void buttomRegister_Click(object sender, EventArgs e)
+        private void buttonRegister_Click(object sender, EventArgs e)
         {
             UserLogin.UserManager usma = new UserLogin.UserManager();
             usma.user = textBoxUser.Text;
@@ -155,15 +157,15 @@ namespace EasyboxClient.UI
         //回车
         private void textBoxPass_KeyUp(object sender, KeyEventArgs e)
         {
-           /* if (e.KeyValue == 13)//判断是否按下Enter键
-                if (buttonLogin.Visible == true)
+            if (e.KeyValue == 13)//判断是否按下Enter键
+                if (loginButtonBox.Visible == true)
                 {
                     buttonLogin_Click(sender, e);// btnLogin.Focus();//将鼠标焦点移动到“登录”按钮
                 }
                 else 
                 {
-                    buttomRegister_Click(sender, e);
-                }*/
+                    //buttomRegister_Click(sender, e);
+                }
         }
         //双击托盘图标事件
         private void notifyIcon1_MouseDoubleClick(object sender, EventArgs e)
@@ -183,10 +185,14 @@ namespace EasyboxClient.UI
             File.Delete("test.txt");
             //重启程序
             t.Abort();
-            textBoxUser.Text = "";
-            textBoxPass.Text = "";
+            textBoxUser.Text = "Username";
+            textBoxUser.ForeColor = Color.Silver;
+            textBoxUser.SelectionStart = 0;
+            textBoxPass.Text = "Passwrod";
+            textBoxPass.ForeColor = Color.Silver;
             this.Show();
             this.ShowInTaskbar = true;
+            textBoxUser.Focus();
             
         }
         //点击更改目录事件
@@ -208,20 +214,42 @@ namespace EasyboxClient.UI
                 t = new Sync.TimingSyncThread(hostName, FilePath);
             }
         }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void textBoxUser_KeyDown(object sender, KeyEventArgs e)
         {
+            if (textBoxUser.Text == "Username")
+            {
+                textBoxUser.Text = "";
+                textBoxUser.ForeColor = Color.Black;
+                
+            }
+        }
+        private void textBoxUser_Validated(object sender, EventArgs e)
+        {
+            if (textBoxUser.Text == "")
+            {
+                textBoxUser.Text = "Username";
+                textBoxUser.ForeColor = Color.Silver;
+            }
+        }
+        private void textBoxPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (textBoxPass.Text == "Password")
+            {
+                textBoxPass.Text = "";
+                textBoxPass.PasswordChar = '*';
+                textBoxPass.ForeColor = Color.Black;
 
+            }
+        }
+        private void textBoxPass_Validated(object sender, EventArgs e)
+        {
+            if (textBoxPass.Text == "")
+            {
+                textBoxPass.Text = "Passwrod";
+                textBoxPass.ForeColor = Color.Silver;
+            }
         }
 
-        private void namePicture0_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
