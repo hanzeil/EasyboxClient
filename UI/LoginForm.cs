@@ -64,16 +64,16 @@ namespace EasyboxClient.UI
         {
             labelRegist.Visible = false;
             labelLogin.Visible = true;
-            buttomRegister.Visible = true;
-            buttonLogin.Visible = false;
+            //buttomRegister.Visible = true;
+            //buttonLogin.Visible = false;
         }
         //点击登陆，跳转登陆页面
         private void labelLogin_Click(object sender, EventArgs e)
         {
             labelRegist.Visible = true;
             labelLogin.Visible = false;
-            buttomRegister.Visible = false;
-            buttonLogin.Visible = true;
+            //buttomRegister.Visible = false;
+            //buttonLogin.Visible = true;
         }
         //单击登陆按钮事件
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -155,7 +155,7 @@ namespace EasyboxClient.UI
         //回车
         private void textBoxPass_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue == 13)//判断是否按下Enter键
+           /* if (e.KeyValue == 13)//判断是否按下Enter键
                 if (buttonLogin.Visible == true)
                 {
                     buttonLogin_Click(sender, e);// btnLogin.Focus();//将鼠标焦点移动到“登录”按钮
@@ -163,7 +163,7 @@ namespace EasyboxClient.UI
                 else 
                 {
                     buttomRegister_Click(sender, e);
-                }
+                }*/
         }
         //双击托盘图标事件
         private void notifyIcon1_MouseDoubleClick(object sender, EventArgs e)
@@ -209,5 +209,14 @@ namespace EasyboxClient.UI
             }
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void namePicture0_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

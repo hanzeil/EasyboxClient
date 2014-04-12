@@ -65,9 +65,6 @@
     <Compile Include="UI\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\ReTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="UserLogin\ConnectMysql.cs" />
     <Compile Include="UserLogin\QueryDatabase.cs" />
     <Compile Include="UserLogin\UserManager.cs" />
@@ -98,7 +95,10 @@
   <ItemGroup>
     <Content Include="Easybox.ico" />
     <Content Include="Resources\Easybox.ico" />
+    <Content Include="Resources\login.png" />
     <Content Include="Resources\UI.jpg" />
+    <None Include="Resources\用户名1.png" />
+    <None Include="Resources\用户名0.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -35,17 +35,17 @@
             this.ToolStripChangeMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.FolderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.labelRegist = new System.Windows.Forms.Label();
-            this.buttomRegister = new System.Windows.Forms.Button();
             this.labelLogin = new System.Windows.Forms.Label();
-            this.textBoxPass = new EasyboxClient.UI.GlassText();
-            this.textBoxUser = new EasyboxClient.UI.GlassText();
+            this.textBoxPass = new System.Windows.Forms.TextBox();
+            this.textBoxUser = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -63,47 +63,28 @@
             this.ToolStripLogout,
             this.ToolStripExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 76);
             // 
             // ToolStripChangeMenu
             // 
             this.ToolStripChangeMenu.Name = "ToolStripChangeMenu";
-            this.ToolStripChangeMenu.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripChangeMenu.Size = new System.Drawing.Size(138, 24);
             this.ToolStripChangeMenu.Text = "更改目录";
             this.ToolStripChangeMenu.Click += new System.EventHandler(this.ChangeMenu_Click);
             // 
             // ToolStripLogout
             // 
             this.ToolStripLogout.Name = "ToolStripLogout";
-            this.ToolStripLogout.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripLogout.Size = new System.Drawing.Size(138, 24);
             this.ToolStripLogout.Text = "注销";
             this.ToolStripLogout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // ToolStripExit
             // 
             this.ToolStripExit.Name = "ToolStripExit";
-            this.ToolStripExit.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripExit.Size = new System.Drawing.Size(138, 24);
             this.ToolStripExit.Text = "退出";
             this.ToolStripExit.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // buttonLogin
-            // 
-            this.buttonLogin.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonLogin.FlatAppearance.BorderSize = 0;
-            this.buttonLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonLogin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonLogin.Location = new System.Drawing.Point(97, 288);
-            this.buttonLogin.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(32, 21);
-            this.buttonLogin.TabIndex = 6;
-            this.buttonLogin.Text = "Login";
-            this.buttonLogin.UseVisualStyleBackColor = true;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // pictureBox1
             // 
@@ -113,7 +94,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 365);
+            this.pictureBox1.Size = new System.Drawing.Size(350, 554);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -130,10 +111,10 @@
             this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonExit.Location = new System.Drawing.Point(191, 0);
+            this.buttonExit.Location = new System.Drawing.Point(310, 0);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(23, 23);
+            this.buttonExit.Size = new System.Drawing.Size(31, 29);
             this.buttonExit.TabIndex = 7;
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
@@ -144,36 +125,23 @@
             this.labelRegist.BackColor = System.Drawing.Color.Transparent;
             this.labelRegist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelRegist.ForeColor = System.Drawing.Color.Honeydew;
-            this.labelRegist.Location = new System.Drawing.Point(24, 312);
+            this.labelRegist.Location = new System.Drawing.Point(32, 485);
+            this.labelRegist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRegist.Name = "labelRegist";
-            this.labelRegist.Size = new System.Drawing.Size(29, 12);
+            this.labelRegist.Size = new System.Drawing.Size(37, 15);
             this.labelRegist.TabIndex = 8;
             this.labelRegist.Text = "注册";
             this.labelRegist.Click += new System.EventHandler(this.lableRegist_Click);
-            // 
-            // buttomRegister
-            // 
-            this.buttomRegister.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.buttomRegister.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.buttomRegister.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BurlyWood;
-            this.buttomRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttomRegister.Location = new System.Drawing.Point(97, 288);
-            this.buttomRegister.Name = "buttomRegister";
-            this.buttomRegister.Size = new System.Drawing.Size(32, 21);
-            this.buttomRegister.TabIndex = 9;
-            this.buttomRegister.Text = "Reg";
-            this.buttomRegister.UseVisualStyleBackColor = true;
-            this.buttomRegister.Visible = false;
-            this.buttomRegister.Click += new System.EventHandler(this.buttomRegister_Click);
             // 
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
             this.labelLogin.BackColor = System.Drawing.Color.Transparent;
             this.labelLogin.ForeColor = System.Drawing.Color.Honeydew;
-            this.labelLogin.Location = new System.Drawing.Point(26, 312);
+            this.labelLogin.Location = new System.Drawing.Point(32, 485);
+            this.labelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(29, 12);
+            this.labelLogin.Size = new System.Drawing.Size(37, 15);
             this.labelLogin.TabIndex = 10;
             this.labelLogin.Text = "登陆";
             this.labelLogin.Visible = false;
@@ -182,49 +150,64 @@
             // textBoxPass
             // 
             this.textBoxPass.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxPass.Font = new System.Drawing.Font("YouYuan", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxPass.Location = new System.Drawing.Point(63, 230);
+            this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPass.Font = new System.Drawing.Font("幼圆", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxPass.Location = new System.Drawing.Point(115, 352);
+            this.textBoxPass.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.PasswordChar = '*';
-            this.textBoxPass.Size = new System.Drawing.Size(100, 22);
+            this.textBoxPass.Size = new System.Drawing.Size(150, 19);
             this.textBoxPass.TabIndex = 5;
             this.textBoxPass.Tag = "shisih";
             this.textBoxPass.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxPass_KeyUp);
             // 
             // textBoxUser
             // 
-            this.textBoxUser.Font = new System.Drawing.Font("YouYuan", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxUser.Location = new System.Drawing.Point(63, 181);
+            this.textBoxUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxUser.Font = new System.Drawing.Font("幼圆", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxUser.Location = new System.Drawing.Point(115, 309);
+            this.textBoxUser.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUser.Name = "textBoxUser";
-            this.textBoxUser.Size = new System.Drawing.Size(100, 22);
+            this.textBoxUser.Size = new System.Drawing.Size(150, 19);
             this.textBoxUser.TabIndex = 4;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::EasyboxClient.Properties.Resources.login;
+            this.pictureBox2.Location = new System.Drawing.Point(72, 412);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(209, 51);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::EasyboxClient.Properties.Resources.UI;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(215, 365);
-            this.Controls.Add(this.labelLogin);
-            this.Controls.Add(this.buttomRegister);
-            this.Controls.Add(this.labelRegist);
-            this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.buttonLogin);
+            this.ClientSize = new System.Drawing.Size(350, 554);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textBoxPass);
             this.Controls.Add(this.textBoxUser);
+            this.Controls.Add(this.labelLogin);
+            this.Controls.Add(this.labelRegist);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,16 +219,15 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ToolStripExit;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private GlassText textBoxUser;
-        private GlassText textBoxPass;
-        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.TextBox textBoxUser;
+        private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.ToolStripMenuItem ToolStripLogout;
         private System.Windows.Forms.ToolStripMenuItem ToolStripChangeMenu;
         private System.Windows.Forms.FolderBrowserDialog FolderBrowserDialog1;
         private System.Windows.Forms.Label labelRegist;
-        private System.Windows.Forms.Button buttomRegister;
         private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
