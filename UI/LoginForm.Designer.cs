@@ -42,10 +42,12 @@
             this.labelLogin = new System.Windows.Forms.Label();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxUser = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.loginButtonBox = new System.Windows.Forms.PictureBox();
+            this.registerButtionBox = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginButtonBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registerButtionBox)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -98,6 +100,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
@@ -125,7 +128,7 @@
             this.labelRegist.BackColor = System.Drawing.Color.Transparent;
             this.labelRegist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelRegist.ForeColor = System.Drawing.Color.Honeydew;
-            this.labelRegist.Location = new System.Drawing.Point(32, 485);
+            this.labelRegist.Location = new System.Drawing.Point(290, 512);
             this.labelRegist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRegist.Name = "labelRegist";
             this.labelRegist.Size = new System.Drawing.Size(37, 15);
@@ -138,7 +141,7 @@
             this.labelLogin.AutoSize = true;
             this.labelLogin.BackColor = System.Drawing.Color.Transparent;
             this.labelLogin.ForeColor = System.Drawing.Color.Honeydew;
-            this.labelLogin.Location = new System.Drawing.Point(32, 485);
+            this.labelLogin.Location = new System.Drawing.Point(290, 530);
             this.labelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(37, 15);
@@ -171,16 +174,27 @@
             this.textBoxUser.Size = new System.Drawing.Size(150, 19);
             this.textBoxUser.TabIndex = 4;
             // 
-            // pictureBox2
+            // loginButtonBox
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::EasyboxClient.Properties.Resources.login;
-            this.pictureBox2.Location = new System.Drawing.Point(72, 412);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(209, 51);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
+            this.loginButtonBox.BackColor = System.Drawing.Color.Transparent;
+            this.loginButtonBox.Image = global::EasyboxClient.Properties.Resources.Right;
+            this.loginButtonBox.Location = new System.Drawing.Point(232, 424);
+            this.loginButtonBox.Name = "loginButtonBox";
+            this.loginButtonBox.Size = new System.Drawing.Size(62, 67);
+            this.loginButtonBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.loginButtonBox.TabIndex = 11;
+            this.loginButtonBox.TabStop = false;
+            // 
+            // registerButtionBox
+            // 
+            this.registerButtionBox.BackColor = System.Drawing.Color.Transparent;
+            this.registerButtionBox.Image = global::EasyboxClient.Properties.Resources.Left;
+            this.registerButtionBox.Location = new System.Drawing.Point(0, 476);
+            this.registerButtionBox.Name = "registerButtionBox";
+            this.registerButtionBox.Size = new System.Drawing.Size(62, 58);
+            this.registerButtionBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.registerButtionBox.TabIndex = 12;
+            this.registerButtionBox.TabStop = false;
             // 
             // LoginForm
             // 
@@ -190,7 +204,8 @@
             this.BackgroundImage = global::EasyboxClient.Properties.Resources.UI;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(350, 554);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.registerButtionBox);
+            this.Controls.Add(this.loginButtonBox);
             this.Controls.Add(this.textBoxPass);
             this.Controls.Add(this.textBoxUser);
             this.Controls.Add(this.labelLogin);
@@ -207,7 +222,8 @@
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginButtonBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registerButtionBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,7 +243,8 @@
         private System.Windows.Forms.FolderBrowserDialog FolderBrowserDialog1;
         private System.Windows.Forms.Label labelRegist;
         private System.Windows.Forms.Label labelLogin;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox loginButtonBox;
+        private System.Windows.Forms.PictureBox registerButtionBox;
     }
 }
 

@@ -95,7 +95,9 @@
   <ItemGroup>
     <Content Include="Easybox.ico" />
     <Content Include="Resources\Easybox.ico" />
+    <None Include="Resources\Left.png" />
     <Content Include="Resources\login.png" />
+    <None Include="Resources\Right.png" />
     <Content Include="Resources\UI.jpg" />
     <None Include="Resources\用户名1.png" />
     <None Include="Resources\用户名0.png" />
