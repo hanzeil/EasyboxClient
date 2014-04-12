@@ -26,7 +26,8 @@ namespace EasyboxClient.UI
         /// <summary>  
         /// 边框颜色  
         /// </summary>  
-        private Color _BorderColor = Color.FromArgb(113, 50, 199);  
+        private Color _BorderColor = Color.FromArgb(113, 50, 199); 
+        //private Color _BorderColor = Color.Black;
   
         public GlassText()  
         {
@@ -66,7 +67,7 @@ namespace EasyboxClient.UI
                     return;  
                 }  
   
-                System.Drawing.Pen pen = new Pen(this._BorderColor, 1);  
+                System.Drawing.Pen pen = new Pen(this._BorderColor, 2);  
                 pen.Color = _BorderColor;  
                 //绘制边框  
                 System.Drawing.Graphics g = Graphics.FromHdc(hDC);
@@ -75,7 +76,11 @@ namespace EasyboxClient.UI
                 g.DrawArc(pen, this.Width - 9, 0, 8, 8, 270, 90);
                 g.DrawArc(pen, this.Width - 9, this.Height - 9, 8, 8, 0, 90);
                 g.DrawArc(pen, 0, this.Height - 9, 8, 8, 90, 90);
-                g.DrawRectangle(pen, 0, 0, this.Width , this.Height );  
+                g.DrawLine(pen, 0, 4, 0, this.Height - 5);
+                g.DrawLine(pen, this.Width, 4, this.Width, this.Height - 5);
+                g.DrawLine(pen, 4, 0, this.Width - 5, 0);
+                g.DrawLine(pen, 4, this.Height-1, this.Width - 5, this.Height-1);
+                //g.DrawRectangle(pen, 0, 0, this.Width , this.Height );  
                 pen.Dispose();  
   
                 //返回结果  
