@@ -32,7 +32,7 @@ namespace Easybox.UI
             InitializeComponent();
             textBoxUser.SelectionStart = 0;
             textBoxPass.SelectionStart = 0;
-            if (!File.Exists("test.txt"))
+            if (!File.Exists("C:\\users\\"+Environment.UserName+"\\AppData\\Roaming\\Easybox\\test.txt"))
             {
                 AnimateWindow(this.Handle, 500, AW_HOR_POSITIVE);
             }
@@ -95,12 +95,12 @@ namespace Easybox.UI
                 }
                 this.Hide();
                 this.notifyIcon1.Visible = true;
-                StreamWriter sw = new StreamWriter("test.txt",false);
+                StreamWriter sw = new StreamWriter("C:\\users\\"+Environment.UserName+"\\AppData\\Roaming\\Easybox\\test.txt",false);
                 sw.WriteLine(FilePath);
                 sw.WriteLine(usma.user);
                 sw.Write(usma.pass);
                 sw.Close();
-                File.SetAttributes("test.txt", FileAttributes.Hidden);
+                File.SetAttributes("C:\\users\\"+Environment.UserName+"\\AppData\\Roaming\\Easybox\\test.txt", FileAttributes.Hidden);
                 String hostName = usma.user + "+" + Dns.GetHostName();
                 t=new Sync.TimingSyncThread(hostName, FilePath);
                 
@@ -119,11 +119,11 @@ namespace Easybox.UI
         //自动登陆
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            if (File.Exists("test.txt")) 
+            if (File.Exists("C:\\users\\"+Environment.UserName+"\\AppData\\Roaming\\Easybox\\test.txt")) 
             {
                 this.Hide();
-                this.ShowInTaskbar = false;
-                StreamReader sr = new StreamReader("test.txt");
+                this.ShowInTaskbar = false;  
+                StreamReader sr = new StreamReader("C:\\users\\"+Environment.UserName+"\\AppData\\Roaming\\Easybox\\test.txt");
                 UserLogin.UserManager usma = new UserLogin.UserManager();
                 FilePath = sr.ReadLine();
                 usma.user = sr.ReadLine();
@@ -186,7 +186,7 @@ namespace Easybox.UI
         //点击注销事件
         private void Logout_Click(object sender, EventArgs e)
         {
-            File.Delete("test.txt");
+            File.Delete("C:\\users\\"+Environment.UserName+"\\AppData\\Roaming\\Easybox\\test.txt");
             //重启程序
             t.Abort();
             textBoxUser.Text = "Username";
@@ -207,13 +207,13 @@ namespace Easybox.UI
                 FilePath = FolderBrowserDialog1.SelectedPath;
                 //重启程序
                 t.Abort();
-                File.Delete("test.txt");
-                StreamWriter sw = new StreamWriter("test.txt", false);
+                File.Delete("C:\\users\\"+Environment.UserName+"\\AppData\\Roaming\\Easybox\\test.txt");
+                StreamWriter sw = new StreamWriter("C:\\users\\"+Environment.UserName+"\\AppData\\Roaming\\Easybox\\test.txt", false);
                 sw.WriteLine(FilePath);
                 sw.WriteLine(textBoxUser.Text);
                 sw.Write(UserLogin.UserManager.GetMD5Hash(textBoxPass.Text));
                 sw.Close();
-                File.SetAttributes("test.txt", FileAttributes.Hidden);
+                File.SetAttributes("C:\\users\\"+Environment.UserName+"\\AppData\\Roaming\\Easybox\\test.txt", FileAttributes.Hidden);
                 String hostName = textBoxUser.Text + "+" + Dns.GetHostName();
                 t = new Sync.TimingSyncThread(hostName, FilePath);
             }

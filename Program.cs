@@ -10,7 +10,6 @@ namespace Easybox
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
-        
         System.Threading.Mutex mutex;//注意，此变量要定义为成员变量，而不是局部变量
         private bool CheckMultiInstance()
         {
