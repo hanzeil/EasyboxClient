@@ -9,17 +9,30 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace EasyboxClient.UI
 {
     public partial class LoginForm : Form
     {
         Sync.TimingSyncThread t;
+        [DllImportAttribute("user32.dll")]
+        private static extern bool AnimateWindow(IntPtr hwnd, int dwTime, int dwFlags);
+        public const Int32 AW_HOR_POSITIVE = 0x00000001;
+        public const Int32 AW_HOR_NEGATIVE = 0x00000002;
+        public const Int32 AW_VER_POSITIVE = 0x00000004;
+        public const Int32 AW_VER_NEGATIVE = 0x00000008;
+        public const Int32 AW_CENTER = 0x00000010;
+        public const Int32 AW_HIDE = 0x00010000;
+        public const Int32 AW_ACTIVATE = 0x00020000;
+        public const Int32 AW_SLIDE = 0x00040000;
+        public const Int32 AW_BLEND = 0x00080000;
         public LoginForm()
         {
             InitializeComponent();
             textBoxUser.SelectionStart = 0;
             textBoxPass.SelectionStart = 0;
+            AnimateWindow(this.Handle, 500, AW_HOR_POSITIVE);
         }
 
         //--------窗体拖动---------
@@ -69,7 +82,6 @@ namespace EasyboxClient.UI
         {
             UserLogin.UserManager usma = new UserLogin.UserManager();
             usma.user = textBoxUser.Text;
-            //usma.pass = textBox2.Text;
             usma.pass = UserLogin.UserManager.GetMD5Hash(textBoxPass.Text);
             if (usma.Login())
             {
@@ -132,13 +144,15 @@ namespace EasyboxClient.UI
         //注册
         private void buttonRegister_Click(object sender, EventArgs e)
         {
+            
             UserLogin.UserManager usma = new UserLogin.UserManager();
             usma.user = textBoxUser.Text;
-            //usma.pass = textBox2.Text;
             usma.pass = UserLogin.UserManager.GetMD5Hash(textBoxPass.Text);
+            usma.check = checkBox1.Checked;
             if (usma.Register())
             {
-                MessageBox.Show("注册成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                  MessageBox.Show("注册成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                  TurnToLogin_Click(sender, e);
             }
         }
         //回车
@@ -239,18 +253,30 @@ namespace EasyboxClient.UI
         {
             TurnToReg.Visible=false;
             buttonLogin.Visible = false;
+            textBoxUser.Visible = false;
+            textBoxPass.Visible = false;
+            Application.DoEvents();
             Thread.Sleep(300);
+            checkBox1.Visible = true;
             TurnToLogin.Visible = true;
             buttonRegister.Visible = true;
+            textBoxUser.Visible = true;
+            textBoxPass.Visible = true;
             
         }
         private void TurnToLogin_Click(object sender, EventArgs e)
         {
             TurnToLogin.Visible = false;
             buttonRegister.Visible = false;
+            textBoxUser.Visible = false;
+            textBoxPass.Visible = false;
+            checkBox1.Visible = false;
+            Application.DoEvents();
             Thread.Sleep(300);
             TurnToReg.Visible = true;
             buttonLogin.Visible = true;
+            textBoxUser.Visible = true;
+            textBoxPass.Visible = true;
         }
 
         private void buttonBoxLogin_MouseDown(object sender, MouseEventArgs e)
@@ -350,7 +376,20 @@ namespace EasyboxClient.UI
 
         private void buttonMin_Click(object sender, EventArgs e)
         {
+
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            AnimateWindow(this.Handle, 500, AW_HOR_NEGATIVE + AW_HIDE);
+        }
+
+        private void LoginForm_Deactivate(object sender, EventArgs e)
+        {
+            if(this.WindowState == FormWindowState.Minimized)
+            AnimateWindow(this.Handle, 500, AW_VER_POSITIVE + AW_HIDE);
+        }
+
     }
 }

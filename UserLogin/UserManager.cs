@@ -11,6 +11,7 @@ namespace EasyboxClient.UserLogin
     {
         public String user;
         public String pass;
+        public bool check;
         QueryDatabase querydb=new QueryDatabase();
         public bool Login(){
             if (user == string.Empty || user.Equals("Username"))
@@ -41,6 +42,16 @@ namespace EasyboxClient.UserLogin
             if (querydb.IsUserExit(user))
             {
                 MessageBox.Show("用户名已存在！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (pass == GetMD5Hash(string.Empty) || pass.Equals(GetMD5Hash("Password")))
+            {
+                MessageBox.Show("密码不能为空！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (!check)
+            {
+                MessageBox.Show("请同意条款！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
             else 
