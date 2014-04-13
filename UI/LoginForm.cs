@@ -32,7 +32,10 @@ namespace EasyboxClient.UI
             InitializeComponent();
             textBoxUser.SelectionStart = 0;
             textBoxPass.SelectionStart = 0;
-            AnimateWindow(this.Handle, 500, AW_HOR_POSITIVE);
+            if (!File.Exists("test.txt"))
+            {
+                AnimateWindow(this.Handle, 500, AW_HOR_POSITIVE);
+            }
         }
 
         //--------窗体拖动---------
@@ -40,7 +43,7 @@ namespace EasyboxClient.UI
 
         bool leftFlag;//标签是否为左键
         
-        String FilePath="C:\\Users\\"+Environment.UserName+"\\Easybox";//同步文件夹路径
+        String FilePath="C:\\Users\\"+Environment.UserName+"\\Documents\\Easybox";//同步文件夹路径
 
         //在窗体上按下发生事件
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -135,7 +138,7 @@ namespace EasyboxClient.UI
                 }
                 else 
                 {
-                    this.Show();
+                    //this.Show();
                     this.ShowInTaskbar = true;
                 }
             }
@@ -389,6 +392,11 @@ namespace EasyboxClient.UI
         {
             if(this.WindowState == FormWindowState.Minimized)
             AnimateWindow(this.Handle, 500, AW_VER_POSITIVE + AW_HIDE);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

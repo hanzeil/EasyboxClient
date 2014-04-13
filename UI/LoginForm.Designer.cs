@@ -71,26 +71,26 @@
             this.ToolStripLogout,
             this.ToolStripExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 76);
             // 
             // ToolStripChangeMenu
             // 
             this.ToolStripChangeMenu.Name = "ToolStripChangeMenu";
-            this.ToolStripChangeMenu.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripChangeMenu.Size = new System.Drawing.Size(138, 24);
             this.ToolStripChangeMenu.Text = "更改目录";
             this.ToolStripChangeMenu.Click += new System.EventHandler(this.ChangeMenu_Click);
             // 
             // ToolStripLogout
             // 
             this.ToolStripLogout.Name = "ToolStripLogout";
-            this.ToolStripLogout.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripLogout.Size = new System.Drawing.Size(138, 24);
             this.ToolStripLogout.Text = "注销";
             this.ToolStripLogout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // ToolStripExit
             // 
             this.ToolStripExit.Name = "ToolStripExit";
-            this.ToolStripExit.Size = new System.Drawing.Size(124, 22);
+            this.ToolStripExit.Size = new System.Drawing.Size(138, 24);
             this.ToolStripExit.Text = "退出";
             this.ToolStripExit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -102,10 +102,11 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 443);
+            this.pictureBox1.Size = new System.Drawing.Size(349, 554);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
@@ -114,11 +115,12 @@
             // 
             this.textBoxPass.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPass.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPass.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPass.ForeColor = System.Drawing.Color.Silver;
-            this.textBoxPass.Location = new System.Drawing.Point(78, 286);
+            this.textBoxPass.Location = new System.Drawing.Point(104, 358);
+            this.textBoxPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPass.Name = "textBoxPass";
-            this.textBoxPass.Size = new System.Drawing.Size(131, 22);
+            this.textBoxPass.Size = new System.Drawing.Size(175, 27);
             this.textBoxPass.TabIndex = 5;
             this.textBoxPass.Tag = "";
             this.textBoxPass.Text = "Password";
@@ -130,11 +132,12 @@
             // textBoxUser
             // 
             this.textBoxUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUser.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUser.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUser.ForeColor = System.Drawing.Color.Silver;
-            this.textBoxUser.Location = new System.Drawing.Point(77, 247);
+            this.textBoxUser.Location = new System.Drawing.Point(103, 309);
+            this.textBoxUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxUser.Name = "textBoxUser";
-            this.textBoxUser.Size = new System.Drawing.Size(132, 22);
+            this.textBoxUser.Size = new System.Drawing.Size(176, 27);
             this.textBoxUser.TabIndex = 4;
             this.textBoxUser.Text = "Username";
             this.textBoxUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUser_KeyDown);
@@ -144,10 +147,10 @@
             // 
             this.buttonLogin.BackColor = System.Drawing.Color.Transparent;
             this.buttonLogin.Image = global::EasyboxClient.Properties.Resources.Right;
-            this.buttonLogin.Location = new System.Drawing.Point(164, 340);
-            this.buttonLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonLogin.Location = new System.Drawing.Point(219, 425);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(46, 46);
+            this.buttonLogin.Size = new System.Drawing.Size(61, 58);
             this.buttonLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonLogin.TabIndex = 11;
             this.buttonLogin.TabStop = false;
@@ -160,10 +163,10 @@
             // 
             this.TurnToReg.BackColor = System.Drawing.Color.Transparent;
             this.TurnToReg.Image = global::EasyboxClient.Properties.Resources.Register;
-            this.TurnToReg.Location = new System.Drawing.Point(46, 340);
-            this.TurnToReg.Margin = new System.Windows.Forms.Padding(2);
+            this.TurnToReg.Location = new System.Drawing.Point(61, 425);
+            this.TurnToReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TurnToReg.Name = "TurnToReg";
-            this.TurnToReg.Size = new System.Drawing.Size(46, 46);
+            this.TurnToReg.Size = new System.Drawing.Size(61, 58);
             this.TurnToReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.TurnToReg.TabIndex = 12;
             this.TurnToReg.TabStop = false;
@@ -176,9 +179,10 @@
             // 
             this.TurnToLogin.BackColor = System.Drawing.Color.Transparent;
             this.TurnToLogin.Image = global::EasyboxClient.Properties.Resources.Left;
-            this.TurnToLogin.Location = new System.Drawing.Point(46, 340);
+            this.TurnToLogin.Location = new System.Drawing.Point(61, 425);
+            this.TurnToLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TurnToLogin.Name = "TurnToLogin";
-            this.TurnToLogin.Size = new System.Drawing.Size(46, 46);
+            this.TurnToLogin.Size = new System.Drawing.Size(61, 58);
             this.TurnToLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.TurnToLogin.TabIndex = 13;
             this.TurnToLogin.TabStop = false;
@@ -192,9 +196,10 @@
             // 
             this.buttonRegister.BackColor = System.Drawing.Color.Transparent;
             this.buttonRegister.Image = global::EasyboxClient.Properties.Resources.Right;
-            this.buttonRegister.Location = new System.Drawing.Point(164, 340);
+            this.buttonRegister.Location = new System.Drawing.Point(219, 425);
+            this.buttonRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(46, 46);
+            this.buttonRegister.Size = new System.Drawing.Size(61, 58);
             this.buttonRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonRegister.TabIndex = 14;
             this.buttonRegister.TabStop = false;
@@ -208,10 +213,10 @@
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Transparent;
             this.buttonExit.Image = global::EasyboxClient.Properties.Resources.Close;
-            this.buttonExit.Location = new System.Drawing.Point(219, 0);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExit.Location = new System.Drawing.Point(292, 0);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(43, 21);
+            this.buttonExit.Size = new System.Drawing.Size(57, 26);
             this.buttonExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonExit.TabIndex = 15;
             this.buttonExit.TabStop = false;
@@ -224,10 +229,10 @@
             // 
             this.buttonMin.BackColor = System.Drawing.Color.Transparent;
             this.buttonMin.Image = global::EasyboxClient.Properties.Resources.Min;
-            this.buttonMin.Location = new System.Drawing.Point(194, 0);
-            this.buttonMin.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMin.Location = new System.Drawing.Point(259, 0);
+            this.buttonMin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonMin.Name = "buttonMin";
-            this.buttonMin.Size = new System.Drawing.Size(26, 21);
+            this.buttonMin.Size = new System.Drawing.Size(35, 26);
             this.buttonMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonMin.TabIndex = 16;
             this.buttonMin.TabStop = false;
@@ -240,11 +245,12 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.checkBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.checkBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.checkBox1.Location = new System.Drawing.Point(46, 318);
+            this.checkBox1.Location = new System.Drawing.Point(61, 398);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(87, 21);
+            this.checkBox1.Size = new System.Drawing.Size(106, 24);
             this.checkBox1.TabIndex = 17;
             this.checkBox1.Text = "我同意条款";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -252,12 +258,12 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::EasyboxClient.Properties.Resources.UI;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(262, 443);
+            this.ClientSize = new System.Drawing.Size(349, 554);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.buttonMin);
             this.Controls.Add(this.buttonExit);
@@ -271,6 +277,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
