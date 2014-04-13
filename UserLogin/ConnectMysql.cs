@@ -6,7 +6,7 @@ using System.Text;
 using MySql.Data.MySqlClient;//导入用MySql的包 
 using System.Data;//引用DataTable 
 using System.Windows.Forms;
-namespace EasyboxClient.UserLogin
+namespace Easybox.UserLogin
 {
     public class ConnectMysql
     {

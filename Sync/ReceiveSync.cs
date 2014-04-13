@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using System.Windows.Forms;
-namespace EasyboxClient.Sync
+namespace Easybox.Sync
 {
     class ReceiveSync
     {

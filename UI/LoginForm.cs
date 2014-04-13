@@ -11,7 +11,7 @@ using System.Net;
 using System.Threading;
 using System.Runtime.InteropServices;
 
-namespace EasyboxClient.UI
+namespace Easybox.UI
 {
     public partial class LoginForm : Form
     {
@@ -284,77 +284,77 @@ namespace EasyboxClient.UI
 
         private void buttonBoxLogin_MouseDown(object sender, MouseEventArgs e)
         {
-            this.buttonLogin.Image = global::EasyboxClient.Properties.Resources.Right_down;
+            this.buttonLogin.Image = global::Easybox.Properties.Resources.Right_down;
         }
 
         private void buttonBoxLogin_MouseMove(object sender, MouseEventArgs e)
         {
-            this.buttonLogin.Image = global::EasyboxClient.Properties.Resources.Right_move;
+            this.buttonLogin.Image = global::Easybox.Properties.Resources.Right_move;
         }
 
         private void buttonBoxLogin_MouseLeave(object sender, EventArgs e)
         {
-            this.buttonLogin.Image = global::EasyboxClient.Properties.Resources.Right;
+            this.buttonLogin.Image = global::Easybox.Properties.Resources.Right;
         }
 
         private void TurnToLogin_MouseDown(object sender, MouseEventArgs e)
         {
-            this.TurnToLogin.Image = global::EasyboxClient.Properties.Resources.Left_down;
+            this.TurnToLogin.Image = global::Easybox.Properties.Resources.Left_down;
         }
 
         private void TurnToLogin_MouseMove(object sender, MouseEventArgs e)
         {
-            this.TurnToLogin.Image = global::EasyboxClient.Properties.Resources.Left_move;
+            this.TurnToLogin.Image = global::Easybox.Properties.Resources.Left_move;
         }
 
         private void TurnToLogin_MouseLeave(object sender, EventArgs e)
         {
-            this.TurnToLogin.Image = global::EasyboxClient.Properties.Resources.Left;
+            this.TurnToLogin.Image = global::Easybox.Properties.Resources.Left;
         }
 
         private void TurnToReg_DragLeave(object sender, EventArgs e)
         {
-            this.TurnToReg.Image = global::EasyboxClient.Properties.Resources.Register;
+            this.TurnToReg.Image = global::Easybox.Properties.Resources.Register;
         }
 
         private void TurnToReg_MouseMove(object sender, MouseEventArgs e)
         {
-            this.TurnToReg.Image = global::EasyboxClient.Properties.Resources.Register_move;
+            this.TurnToReg.Image = global::Easybox.Properties.Resources.Register_move;
         }
 
         private void TurnToReg_MouseDown(object sender, MouseEventArgs e)
         {
-            this.TurnToReg.Image = global::EasyboxClient.Properties.Resources.Register_down;
+            this.TurnToReg.Image = global::Easybox.Properties.Resources.Register_down;
         }
 
         private void buttonBoxRegister_MouseLeave(object sender, EventArgs e)
         {
-            this.buttonRegister.Image = global::EasyboxClient.Properties.Resources.Right;
+            this.buttonRegister.Image = global::Easybox.Properties.Resources.Right;
         }
 
         private void buttonBoxRegister_MouseDown(object sender, MouseEventArgs e)
         {
-            this.buttonRegister.Image = global::EasyboxClient.Properties.Resources.Right_down;
+            this.buttonRegister.Image = global::Easybox.Properties.Resources.Right_down;
         }
 
         private void buttonBoxRegister_MouseMove(object sender, MouseEventArgs e)
         {
-            this.buttonRegister.Image = global::EasyboxClient.Properties.Resources.Right_move;
+            this.buttonRegister.Image = global::Easybox.Properties.Resources.Right_move;
         }
 
         private void buttonExit_MouseDown(object sender, MouseEventArgs e)
         {
-            this.buttonExit.Image = global::EasyboxClient.Properties.Resources.Close_down;
+            this.buttonExit.Image = global::Easybox.Properties.Resources.Close_down;
         }
 
         private void buttonExit_MouseMove(object sender, MouseEventArgs e)
         {
-            this.buttonExit.Image = global::EasyboxClient.Properties.Resources.Close_move;
+            this.buttonExit.Image = global::Easybox.Properties.Resources.Close_move;
         }
 
         private void buttonExit_MouseLeave(object sender, EventArgs e)
         {
-            this.buttonExit.Image = global::EasyboxClient.Properties.Resources.Close;
+            this.buttonExit.Image = global::Easybox.Properties.Resources.Close;
         }
 
         private void buttonExit_MouseClick(object sender, MouseEventArgs e)
@@ -364,17 +364,17 @@ namespace EasyboxClient.UI
 
         private void buttonMin_MouseDown(object sender, MouseEventArgs e)
         {
-            this.buttonMin.Image = global::EasyboxClient.Properties.Resources.Min_Down;
+            this.buttonMin.Image = global::Easybox.Properties.Resources.Min_Down;
         }
 
         private void buttonMin_MouseMove(object sender, MouseEventArgs e)
         {
-            this.buttonMin.Image = global::EasyboxClient.Properties.Resources.Min_move;
+            this.buttonMin.Image = global::Easybox.Properties.Resources.Min_move;
         }
 
         private void buttonMin_MouseLeave(object sender, EventArgs e)
         {
-            this.buttonMin.Image = global::EasyboxClient.Properties.Resources.Min;
+            this.buttonMin.Image = global::Easybox.Properties.Resources.Min;
         }
 
         private void buttonMin_Click(object sender, EventArgs e)

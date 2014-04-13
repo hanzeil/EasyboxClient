@@ -8,8 +8,8 @@
     <ProjectGuid>{17E096C2-FD4E-4D45-9FF7-7337ABC4C405}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EasyboxClient</RootNamespace>
-    <AssemblyName>EasyboxClient</AssemblyName>
+    <RootNamespace>Easybox</RootNamespace>
+    <AssemblyName>Easybox</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

@@ -7,7 +7,7 @@ using System.Threading;
 using System.Net;
 using System.Net.Sockets;
 using System.Windows.Forms;
-namespace EasyboxClient.Sync
+namespace Easybox.Sync
 {   
     class TimingSyncThread
     {

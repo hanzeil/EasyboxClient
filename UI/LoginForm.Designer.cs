@@ -1,4 +1,4 @@
-﻿namespace EasyboxClient.UI
+﻿namespace Easybox.UI
 {
     partial class LoginForm
     {
@@ -98,7 +98,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::EasyboxClient.Properties.Resources.UI;
+            this.pictureBox1.Image = global::Easybox.Properties.Resources.UI;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
@@ -146,7 +146,7 @@
             // buttonLogin
             // 
             this.buttonLogin.BackColor = System.Drawing.Color.Transparent;
-            this.buttonLogin.Image = global::EasyboxClient.Properties.Resources.Right;
+            this.buttonLogin.Image = global::Easybox.Properties.Resources.Right;
             this.buttonLogin.Location = new System.Drawing.Point(219, 425);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonLogin.Name = "buttonLogin";
@@ -162,7 +162,7 @@
             // TurnToReg
             // 
             this.TurnToReg.BackColor = System.Drawing.Color.Transparent;
-            this.TurnToReg.Image = global::EasyboxClient.Properties.Resources.Register;
+            this.TurnToReg.Image = global::Easybox.Properties.Resources.Register;
             this.TurnToReg.Location = new System.Drawing.Point(61, 425);
             this.TurnToReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TurnToReg.Name = "TurnToReg";
@@ -178,7 +178,7 @@
             // TurnToLogin
             // 
             this.TurnToLogin.BackColor = System.Drawing.Color.Transparent;
-            this.TurnToLogin.Image = global::EasyboxClient.Properties.Resources.Left;
+            this.TurnToLogin.Image = global::Easybox.Properties.Resources.Left;
             this.TurnToLogin.Location = new System.Drawing.Point(61, 425);
             this.TurnToLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TurnToLogin.Name = "TurnToLogin";
@@ -195,7 +195,7 @@
             // buttonRegister
             // 
             this.buttonRegister.BackColor = System.Drawing.Color.Transparent;
-            this.buttonRegister.Image = global::EasyboxClient.Properties.Resources.Right;
+            this.buttonRegister.Image = global::Easybox.Properties.Resources.Right;
             this.buttonRegister.Location = new System.Drawing.Point(219, 425);
             this.buttonRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonRegister.Name = "buttonRegister";
@@ -212,7 +212,7 @@
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.Image = global::EasyboxClient.Properties.Resources.Close;
+            this.buttonExit.Image = global::Easybox.Properties.Resources.Close;
             this.buttonExit.Location = new System.Drawing.Point(292, 0);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExit.Name = "buttonExit";
@@ -228,7 +228,7 @@
             // buttonMin
             // 
             this.buttonMin.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMin.Image = global::EasyboxClient.Properties.Resources.Min;
+            this.buttonMin.Image = global::Easybox.Properties.Resources.Min;
             this.buttonMin.Location = new System.Drawing.Point(259, 0);
             this.buttonMin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonMin.Name = "buttonMin";
@@ -261,7 +261,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::EasyboxClient.Properties.Resources.UI;
+            this.BackgroundImage = global::Easybox.Properties.Resources.UI;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(349, 554);
             this.Controls.Add(this.checkBox1);
