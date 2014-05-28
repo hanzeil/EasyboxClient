@@ -23,7 +23,7 @@ namespace Easybox.UserLogin
             }
             catch (MySqlException)
             {
-                MessageBox.Show("您已与服务器断开，请检查网络！", "Easybox");
+                MessageBox.Show("您已与服务器断开，请稍后再试！", "Easybox");
                 return null;
             }
         }

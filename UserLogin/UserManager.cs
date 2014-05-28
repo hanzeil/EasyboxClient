@@ -14,19 +14,27 @@ namespace Easybox.UserLogin
         public bool check;
         QueryDatabase querydb=new QueryDatabase();
         public bool Login(){
-            if (user == string.Empty || user.Equals("Username"))
+            try
             {
-                MessageBox.Show("用户名称不能为空！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                if (user == string.Empty || user.Equals("Username"))
+                {
+                    MessageBox.Show("用户名称不能为空！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if (!querydb.IsUserExit(user))
+                {
+                    MessageBox.Show("用户名不存在！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if (!querydb.IsPassRight(user, pass))
+                {
+                    MessageBox.Show("密码错误！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
-            if (!querydb.IsUserExit(user))
+            catch (Exception)
             {
-                MessageBox.Show("用户名不存在！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            if (!querydb.IsPassRight(user,pass))
-            {
-                MessageBox.Show("密码错误！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("您已与服务器断开，请稍后再试！", "Easybox");
                 return false;
             }
             return true;
@@ -34,30 +42,38 @@ namespace Easybox.UserLogin
         }
         public bool Register()
         {
-            if (user == string.Empty || user.Equals("Username"))
+            try
             {
-                MessageBox.Show("用户名称不能为空！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                if (user == string.Empty || user.Equals("Username"))
+                {
+                    MessageBox.Show("用户名称不能为空！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if (querydb.IsUserExit(user))
+                {
+                    MessageBox.Show("用户名已存在！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if (pass == GetMD5Hash(string.Empty) || pass.Equals(GetMD5Hash("Password")))
+                {
+                    MessageBox.Show("密码不能为空！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if (!check)
+                {
+                    MessageBox.Show("请同意条款！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+                else
+                {
+                    querydb.AddUser(user, pass);
+                    return true;
+                }
             }
-            if (querydb.IsUserExit(user))
+            catch (Exception)
             {
-                MessageBox.Show("用户名已存在！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("您已与服务器断开，请稍后再试！", "Easybox");
                 return false;
-            }
-            if (pass == GetMD5Hash(string.Empty) || pass.Equals(GetMD5Hash("Password")))
-            {
-                MessageBox.Show("密码不能为空！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            if (!check)
-            {
-                MessageBox.Show("请同意条款！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            else 
-            {
-                querydb.AddUser(user, pass);
-                return true;
             }
         }
         public static String GetMD5Hash(String input)

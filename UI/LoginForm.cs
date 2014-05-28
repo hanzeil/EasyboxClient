@@ -93,6 +93,7 @@ namespace Easybox.UI
                 {
                     Directory.CreateDirectory(FilePath);
                 }
+                MessageBox.Show("登录成功，双击托盘图标打开同步的文件夹！", "Easybox");
                 this.Hide();
                 this.notifyIcon1.Visible = true;
                 StreamWriter sw = new StreamWriter("C:\\users\\"+Environment.UserName+"\\AppData\\Roaming\\Easybox\\test.txt",false);

@@ -51,7 +51,7 @@ namespace Easybox.Sync
                 SendStringByUTF8(relativePath);
             }catch (SocketException)
             {
-                MessageBox.Show("您已与服务器断开，同步失败！", "Easybox");
+                //MessageBox.Show("您已与服务器断开，同步失败！", "Easybox");
             } 
             if (syncType.Equals("Send"))
             {
